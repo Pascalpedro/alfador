@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
-import logo from "@/assets/alfador-logo.png.asset.json";
+import lockup from "@/assets/alfador-lockup.png.asset.json";
 
 export function Footer() {
   return (
