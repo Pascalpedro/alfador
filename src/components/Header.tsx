@@ -57,7 +57,10 @@ export function Header() {
       </div>
 
       {open && (
-        <nav aria-label="Mobile" className="border-t border-border bg-background px-5 py-3 md:hidden">
+        <nav
+          aria-label="Mobile"
+          className="border-t border-primary-foreground/10 bg-ink px-5 py-3 text-primary-foreground md:hidden"
+        >
           <ul className="flex flex-col">
             {[...nav, { to: "/contact", label: "Contact" } as const].map((item) => (
               <li key={item.to}>
@@ -65,8 +68,8 @@ export function Header() {
                   to={item.to}
                   onClick={() => setOpen(false)}
                   activeOptions={{ exact: item.to === "/" }}
-                  activeProps={{ className: "text-foreground" }}
-                  inactiveProps={{ className: "text-muted-foreground" }}
+                  activeProps={{ className: "text-primary-foreground" }}
+                  inactiveProps={{ className: "text-primary-foreground/65" }}
                   className="block rounded-lg px-2 py-3 text-base font-medium"
                 >
                   {item.label}
