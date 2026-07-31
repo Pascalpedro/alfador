@@ -76,8 +76,8 @@ function Home() {
         <Container className="py-16 text-center md:py-24">
           <div className="rise-in mx-auto max-w-3xl">
             <h1 className="text-4xl font-semibold leading-[1.05] md:text-6xl">
-              Bridging Business and{" "}
-              <span className="text-electric">Technology</span>
+              Bridging the gaps between your business and{" "}
+              <span className="text-electric">technology</span>
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
               Alfador designs and builds the networks, cloud platforms, AI systems and security
