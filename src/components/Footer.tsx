@@ -4,7 +4,7 @@ import logo from "@/assets/alfador-logo.png.asset.json";
 
 export function Footer() {
   return (
-    <footer className="mt-24 bg-navy text-primary-foreground">
+    <footer className="mt-24 bg-ink text-primary-foreground">
       <div className="mx-auto max-w-6xl px-5 py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div className="min-w-0">
