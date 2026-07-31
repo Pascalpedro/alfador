@@ -36,9 +36,14 @@
   --color-ring-offset-background: var(--background);
   --color-navy: var(--navy);
   --color-navy-soft: var(--navy-soft);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-electric: var(--electric);
+  --color-electric-foreground: var(--electric-foreground);
   --color-brand: var(--brand);
   --color-brand-soft: var(--brand-soft);
   --color-surface: var(--surface);
+
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
@@ -60,12 +65,17 @@
   /* Brand */
   --navy: oklch(0.253 0.062 262.5); /* #0B1F3A */
   --navy-soft: oklch(0.33 0.072 262);
+  --ink: oklch(0.205 0.055 264); /* deep midnight blue panels */
+  --ink-soft: oklch(0.265 0.058 264);
+  --electric: oklch(0.62 0.207 258); /* cobalt / electric blue accent */
+  --electric-foreground: oklch(0.99 0 0);
   --brand: oklch(0.55 0.17 258);
   --brand-soft: oklch(0.95 0.025 250);
-  --surface: oklch(0.982 0.004 250);
+  --surface: oklch(0.968 0.005 250); /* off-white light sections */
 
   --background: oklch(1 0 0);
   --foreground: var(--navy);
+
   --card: oklch(1 0 0);
   --card-foreground: var(--navy);
   --popover: oklch(1 0 0);
