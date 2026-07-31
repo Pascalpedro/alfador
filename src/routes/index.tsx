@@ -5,6 +5,7 @@ import { Container, Section } from "@/components/layout-primitives";
 import { CTABand } from "@/components/CTABand";
 import { solutions, projects, insights } from "@/data/content";
 import heroImage from "@/assets/hero-network.jpg";
+import lockup from "@/assets/alfador-lockup.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -75,6 +76,13 @@ function Home() {
       <div className="bg-surface">
         <Container className="py-16 text-center md:py-24">
           <div className="rise-in mx-auto max-w-3xl">
+            <img
+              src={lockup.url}
+              alt="Alfador — Bridging business and technology"
+              width={627}
+              height={406}
+              className="mx-auto mb-8 w-40 rounded-2xl shadow-soft md:w-48"
+            />
             <h1 className="text-4xl font-semibold leading-[1.05] md:text-6xl">
               Bridging the gaps between your business and{" "}
               <span className="text-electric">technology</span>
