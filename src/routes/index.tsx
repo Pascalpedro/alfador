@@ -13,13 +13,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Alfador builds secure, intelligent and scalable digital infrastructure: IT networks, cloud and DevOps, AI, enterprise automation and cybersecurity.",
+          "Alfador designs, implements and maintains intelligent IT solutions: network solutions, cloud infrastructure, business security, managed IT services, AI & automation, power & energy, and strategic technology advisory.",
       },
       { property: "og:title", content: "Alfador — Bridging Business and Technology" },
       {
         property: "og:description",
         content:
-          "Secure, intelligent and scalable technology for modern enterprises — networks, cloud, AI, automation and security.",
+          "Secure, cost-effective technology for modern enterprises — networks, cloud, security, managed IT, AI automation, power and strategic advisory.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -80,8 +80,8 @@ function Home() {
               <span className="text-electric">technology</span>
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              Alfador designs and builds the networks, cloud platforms, AI systems and security
-              foundations that serious organisations depend on every day.
+              Alfador designs, implements, and maintains intelligent IT solutions to make your
+              business secure, efficient, and profitable.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Button
@@ -90,7 +90,7 @@ function Home() {
                 className="rounded-full bg-electric px-7 text-electric-foreground hover:bg-electric/90"
               >
                 <Link to="/contact">
-                  Talk to an engineer
+                  Contact us
                   <ArrowRight className="ml-1.5 h-4 w-4" aria-hidden />
                 </Link>
               </Button>
@@ -161,7 +161,7 @@ function Home() {
         <Container className="py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold leading-[1.15] md:text-4xl">
-              Secure and integrated technology services
+              Secure and cost-effective technology services
             </h2>
             <p className="mt-4 text-primary-foreground/70">
               Most of our work sits where these areas overlap — a network decision is a security
@@ -174,7 +174,7 @@ function Home() {
                 key={s.slug}
                 to="/solutions"
                 hash={s.slug}
-                className="group rounded-2xl border border-primary-foreground/15 p-7 transition-colors hover:border-electric hover:bg-primary-foreground/5"
+                className="group rounded-2xl border border-primary-foreground/15 p-7 transition-colors hover:border-electric hover:bg-primary-foreground/5 last:lg:col-start-2"
               >
                 <div className="flex items-start justify-between gap-4">
                   <s.icon className="h-6 w-6 text-electric" aria-hidden />
