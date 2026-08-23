@@ -3,7 +3,7 @@ import { ArrowRight, ArrowUpRight, Check, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container, Section } from "@/components/layout-primitives";
 import { CTABand } from "@/components/CTABand";
-import { solutions, projects, insights } from "@/data/content";
+import { solutions, insights } from "@/data/content";
 import heroImage from "@/assets/hero-network.jpg";
 
 export const Route = createFileRoute("/")({
@@ -43,30 +43,6 @@ const benefits = [
   },
 ];
 
-const engagements = [
-  {
-    name: "Advisory",
-    blurb: "Architecture reviews, security posture assessments and a costed roadmap you can act on.",
-    price: "2–4 weeks",
-    items: [
-      "Current-state architecture review",
-      "Risk and security assessment",
-      "Prioritised technology roadmap",
-      "Executive readout and costings",
-    ],
-  },
-  {
-    name: "Build",
-    blurb: "A dedicated engineering squad delivering the platform end to end, with handover baked in.",
-    price: "3–9 months",
-    items: [
-      "Dedicated delivery squad",
-      "Infrastructure as code from day one",
-      "CI/CD, monitoring and runbooks",
-      "Documented team handover",
-    ],
-  },
-];
 
 function Home() {
   return (
