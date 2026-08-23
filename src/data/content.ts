@@ -80,7 +80,7 @@ export const solutions: Solution[] = [
     icon: Zap,
     title: "Power & Energy Infrastructure",
     summary:
-      "We eliminate operational downtime caused by power instability by deploying renewable energy systems and power solutions",
+      "We eliminate operational downtime caused by power instability by deploying renewable energy systems and power solutions.",
     capabilities: [
       "Solar and hybrid power design",
       "UPS, inverter and battery systems",
