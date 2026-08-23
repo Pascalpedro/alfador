@@ -80,8 +80,8 @@ function Home() {
               <span className="text-electric">technology</span>
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              Alfador designs and builds the networks, cloud platforms, AI systems and security
-              foundations that serious organisations depend on every day.
+              Alfador designs, implements, and maintains intelligent IT solutions to make your
+              business secure, efficient, and profitable.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Button
@@ -90,7 +90,7 @@ function Home() {
                 className="rounded-full bg-electric px-7 text-electric-foreground hover:bg-electric/90"
               >
                 <Link to="/contact">
-                  Talk to an engineer
+                  Contact us
                   <ArrowRight className="ml-1.5 h-4 w-4" aria-hidden />
                 </Link>
               </Button>
