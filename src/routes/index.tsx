@@ -13,13 +13,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Alfador builds secure, intelligent and scalable digital infrastructure: IT networks, cloud and DevOps, AI, enterprise automation and cybersecurity.",
+          "Alfador designs, implements and maintains intelligent IT solutions: network solutions, cloud infrastructure, business security, managed IT services, AI & automation, power & energy, and strategic technology advisory.",
       },
       { property: "og:title", content: "Alfador — Bridging Business and Technology" },
       {
         property: "og:description",
         content:
-          "Secure, intelligent and scalable technology for modern enterprises — networks, cloud, AI, automation and security.",
+          "Secure, cost-effective technology for modern enterprises — networks, cloud, security, managed IT, AI automation, power and strategic advisory.",
       },
       { property: "og:url", content: "/" },
     ],

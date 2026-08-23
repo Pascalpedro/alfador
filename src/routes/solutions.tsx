@@ -7,17 +7,17 @@ import { solutions } from "@/data/content";
 export const Route = createFileRoute("/solutions")({
   head: () => ({
     meta: [
-      { title: "Solutions — Networks, Cloud, AI, Automation & Security | Alfador" },
+      { title: "Solutions — Network, Cloud, Security, Managed IT & AI | Alfador" },
       {
         name: "description",
         content:
-          "Explore Alfador solutions: IT network infrastructure, cloud and DevOps, artificial intelligence, cybersecurity, enterprise automation and data platforms.",
+          "Explore Alfador solutions: network solutions, cloud infrastructure, business security & compliance, managed IT services, AI & business automation, power & energy infrastructure, and strategic technology advisory.",
       },
       { property: "og:title", content: "Alfador Solutions" },
       {
         property: "og:description",
         content:
-          "IT network infrastructure, cloud and DevOps, AI, cybersecurity, enterprise automation and data platforms.",
+          "Network solutions, cloud infrastructure, business security, managed IT, AI automation, power & energy, and strategic technology advisory.",
       },
       { property: "og:url", content: "/solutions" },
     ],
