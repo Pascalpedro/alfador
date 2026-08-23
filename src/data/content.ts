@@ -41,9 +41,8 @@ export const solutions: Solution[] = [
     icon: ShieldCheck,
     title: "Business Security & Compliance",
     summary:
-      "We protect your home & business from cyber threats, ransomware, data loss, unauthorized access and physical security breaches.",
-    capabilities: [
       "We protect your home & business from cyber threats, data loss, unauthorized access and physical security breaches.",
+    capabilities: [
       "Security architecture and zero-trust identity",
       "Vulnerability management and pen testing",
       "SIEM, detection engineering and response",
