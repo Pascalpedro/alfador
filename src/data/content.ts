@@ -13,7 +13,7 @@ export const solutions: Solution[] = [
   {
     slug: "network-solutions",
     icon: Network,
-    title: "Network Solutions",
+    title: "Network Infrastructure Solutions",
     summary:
       "We connect your offices, people, and systems into one seamless, reliable communication and technology environment.",
     capabilities: [
@@ -67,7 +67,7 @@ export const solutions: Solution[] = [
     icon: Cpu,
     title: "AI & Business Automation",
     summary:
-      "Eliminate repetitive work, digitize manual processes, and cut operational costs through custom application development and AI workflow engines.",
+      "We minimize repetitive work, manual processes, and cut operational costs through custom app development and AI workflow engines.",
     capabilities: [
       "Process discovery and workflow design",
       "System integration and API orchestration",
@@ -80,7 +80,7 @@ export const solutions: Solution[] = [
     icon: Zap,
     title: "Power & Energy Infrastructure",
     summary:
-      "We eliminate operational downtime caused by power instability by deploying renewable energy systems and power solutions to ensure your home & business remains online 24/7.",
+      "We eliminate operational downtime caused by power instability by deploying renewable energy systems and power solutions",
     capabilities: [
       "Solar and hybrid power design",
       "UPS, inverter and battery systems",
@@ -93,7 +93,7 @@ export const solutions: Solution[] = [
     icon: Compass,
     title: "Strategic Technology Advisory",
     summary:
-      "Align your technology roadmap directly with your core business objectives, to maximize productivity and eliminate operational costs.",
+      "We align your technology roadmap directly with your core business objectives.",
     capabilities: [
       "Technology roadmap and investment planning",
       "Cost optimisation and vendor selection",
