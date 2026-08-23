@@ -3,7 +3,7 @@ import { ArrowRight, ArrowUpRight, Check, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container, Section } from "@/components/layout-primitives";
 import { CTABand } from "@/components/CTABand";
-import { solutions, projects, insights } from "@/data/content";
+import { solutions, insights } from "@/data/content";
 import heroImage from "@/assets/hero-network.jpg";
 
 export const Route = createFileRoute("/")({
@@ -43,30 +43,6 @@ const benefits = [
   },
 ];
 
-const engagements = [
-  {
-    name: "Advisory",
-    blurb: "Architecture reviews, security posture assessments and a costed roadmap you can act on.",
-    price: "2–4 weeks",
-    items: [
-      "Current-state architecture review",
-      "Risk and security assessment",
-      "Prioritised technology roadmap",
-      "Executive readout and costings",
-    ],
-  },
-  {
-    name: "Build",
-    blurb: "A dedicated engineering squad delivering the platform end to end, with handover baked in.",
-    price: "3–9 months",
-    items: [
-      "Dedicated delivery squad",
-      "Infrastructure as code from day one",
-      "CI/CD, monitoring and runbooks",
-      "Documented team handover",
-    ],
-  },
-];
 
 function Home() {
   return (
@@ -161,11 +137,12 @@ function Home() {
         <Container className="py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold leading-[1.15] md:text-4xl">
-              Secure and cost-effective technology services
+              End-to-End Technology & Infrastructure Solutions
             </h2>
             <p className="mt-4 text-primary-foreground/70">
-              Most of our work sits where these areas overlap — a network decision is a security
-              decision, and a cloud decision is a cost decision.
+              In modern business, technology is entirely interconnected—an infrastructure choice is
+              a security choice, an automation plan is a productivity plan, and our integrated
+              solutions are a cost-reduction plan.
             </p>
           </div>
           <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -193,118 +170,28 @@ function Home() {
         </Container>
       </div>
 
-      {/* Benefits — light split */}
+      {/* Benefits — light */}
       <Section className="bg-background">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div className="rounded-3xl border border-border bg-surface p-6 shadow-soft md:p-10">
-            <div className="space-y-4">
-              {projects.slice(0, 3).map((p) => (
-                <div
-                  key={p.slug}
-                  className="rounded-2xl border border-border bg-card p-5 shadow-soft"
-                >
-                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
-                    {p.sector}
-                  </span>
-                  <h3 className="mt-2 text-sm font-semibold leading-snug">{p.title}</h3>
-                  <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
-                    {p.metrics.slice(0, 2).map((m) => (
-                      <div key={m.label}>
-                        <span className="block font-display text-base font-semibold text-electric">
-                          {m.value}
-                        </span>
-                        <span className="text-xs text-muted-foreground">{m.label}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="min-w-0">
-            <h2 className="text-3xl font-semibold leading-[1.15] md:text-4xl">
-              Key benefits of our engineering standard
-            </h2>
-            <p className="mt-4 text-muted-foreground">
-              Outcomes, not deliverables — infrastructure your team can audit, run and grow into.
-            </p>
-            <ul className="mt-8 space-y-6">
-              {benefits.map((b) => (
-                <li key={b.title} className="flex gap-4">
-                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-electric">
-                    <Check className="h-3.5 w-3.5 text-electric-foreground" aria-hidden />
-                  </span>
-                  <div className="min-w-0">
-                    <h3 className="text-base font-semibold">{b.title}</h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{b.body}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-            <Button asChild variant="outline" className="mt-8 rounded-full">
-              <Link to="/projects">See all projects</Link>
-            </Button>
-          </div>
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl font-semibold leading-[1.15] md:text-4xl">
+            Key benefits of our engineering standard
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            Outcomes, not deliverables — infrastructure your team can audit, run and grow into.
+          </p>
         </div>
+        <ul className="mt-12 grid gap-6 md:grid-cols-3">
+          {benefits.map((b) => (
+            <li key={b.title} className="rounded-2xl border border-border bg-surface p-6 shadow-soft">
+              <span className="grid h-10 w-10 place-items-center rounded-full bg-electric">
+                <Check className="h-5 w-5 text-electric-foreground" aria-hidden />
+              </span>
+              <h3 className="mt-5 text-base font-semibold">{b.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{b.body}</p>
+            </li>
+          ))}
+        </ul>
       </Section>
-
-      {/* Engagements — dark */}
-      <div className="bg-ink text-primary-foreground">
-        <Container className="py-20 md:py-28">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-semibold leading-[1.15] md:text-4xl">
-              Engagement models that fit your scale
-            </h2>
-            <p className="mt-4 text-primary-foreground/70">
-              Flexible ways to work with our engineering team.
-            </p>
-          </div>
-
-          <div className="mx-auto mt-12 grid max-w-4xl gap-4 md:grid-cols-2">
-            {engagements.map((e) => (
-              <div key={e.name} className="rounded-3xl bg-ink-soft p-7">
-                <h3 className="text-lg font-semibold">{e.name}</h3>
-                <p className="mt-2 text-sm text-primary-foreground/60">{e.blurb}</p>
-                <p className="mt-6 font-display text-3xl font-semibold">
-                  {e.price}
-                  <span className="ml-1 text-sm font-normal text-primary-foreground/50">
-                    typical
-                  </span>
-                </p>
-                <Button
-                  asChild
-                  className="mt-6 w-full rounded-full bg-electric text-electric-foreground hover:bg-electric/90"
-                >
-                  <Link to="/contact">Get started</Link>
-                </Button>
-                <ul className="mt-6 space-y-3 border-t border-primary-foreground/15 pt-6">
-                  {e.items.map((i) => (
-                    <li key={i} className="flex gap-2.5 text-sm text-primary-foreground/75">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-electric" aria-hidden />
-                      {i}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <div className="mx-auto mt-4 max-w-4xl rounded-3xl border border-electric/40 bg-electric/10 p-7 text-center">
-            <h3 className="text-lg font-semibold">Managed</h3>
-            <p className="mx-auto mt-2 max-w-lg text-sm text-primary-foreground/70">
-              Ongoing operations, monitoring and 24/7 response for the platforms we build — or the
-              ones you already run.
-            </p>
-            <Button
-              asChild
-              className="mt-5 rounded-full bg-electric px-7 text-electric-foreground hover:bg-electric/90"
-            >
-              <Link to="/contact">Talk to us</Link>
-            </Button>
-          </div>
-        </Container>
-      </div>
 
       {/* Insights — light */}
       <Section className="bg-background">
