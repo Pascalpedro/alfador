@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Cloud, Cpu, Network, ShieldCheck, Workflow, Database } from "lucide-react";
+import { Cloud, Cpu, Network, ShieldCheck, Workflow, Zap, Compass, Monitor } from "lucide-react";
 
 export type Solution = {
   slug: string;
@@ -11,11 +11,11 @@ export type Solution = {
 
 export const solutions: Solution[] = [
   {
-    slug: "network-infrastructure",
+    slug: "network-solutions",
     icon: Network,
-    title: "IT Network Infrastructure",
+    title: "Network Solutions",
     summary:
-      "Campus, data centre and branch networks engineered for uptime, segmentation and predictable performance.",
+      "We connect your offices, people, and systems into one seamless, reliable communication and technology environment.",
     capabilities: [
       "Structured cabling & data centre build-out",
       "SD-WAN and multi-site connectivity",
@@ -24,11 +24,11 @@ export const solutions: Solution[] = [
     ],
   },
   {
-    slug: "cloud-devops",
+    slug: "cloud-infrastructure",
     icon: Cloud,
-    title: "Cloud Infrastructure & DevOps",
+    title: "Cloud Infrastructure",
     summary:
-      "Landing zones, IaC and delivery pipelines that make releases boring — in the best possible way.",
+      "We provide flexible cloud solutions to build, run, and scale your business with confidence.",
     capabilities: [
       "AWS / Azure / GCP landing zones",
       "Terraform, Kubernetes and GitOps",
@@ -37,24 +37,11 @@ export const solutions: Solution[] = [
     ],
   },
   {
-    slug: "artificial-intelligence",
-    icon: Cpu,
-    title: "Artificial Intelligence",
-    summary:
-      "Applied AI that plugs into real workflows — grounded in your data, governed and measurable.",
-    capabilities: [
-      "RAG assistants over enterprise knowledge",
-      "Document and vision intelligence",
-      "Forecasting and decision support models",
-      "Model governance, evaluation and guardrails",
-    ],
-  },
-  {
-    slug: "cybersecurity",
+    slug: "business-security-compliance",
     icon: ShieldCheck,
-    title: "Cybersecurity",
+    title: "Business Security & Compliance",
     summary:
-      "Defence built into the architecture, not bolted on afterwards — from identity to incident response.",
+      "We protect your home & business from cyber threats, ransomware, data loss, unauthorized access and physical security breaches.",
     capabilities: [
       "Security architecture and zero-trust identity",
       "Vulnerability management and pen testing",
@@ -63,29 +50,55 @@ export const solutions: Solution[] = [
     ],
   },
   {
-    slug: "enterprise-automation",
-    icon: Workflow,
-    title: "Enterprise Automation",
+    slug: "managed-it-services",
+    icon: Monitor,
+    title: "Managed IT Services",
     summary:
-      "Remove the manual handoffs between your systems and let teams spend their time on judgement work.",
+      "We provide end-to-end IT support so you can focus on what matters most—your business.",
+    capabilities: [
+      "24/7 monitoring and service desk",
+      "Patching, backup and disaster recovery",
+      "Endpoint and server management",
+      "Vendor management and IT roadmapping",
+    ],
+  },
+  {
+    slug: "ai-business-automation",
+    icon: Cpu,
+    title: "AI & Business Automation",
+    summary:
+      "Eliminate repetitive work, digitize manual processes, and cut operational costs through custom application development and AI workflow engines.",
     capabilities: [
       "Process discovery and workflow design",
       "System integration and API orchestration",
-      "Robotic process automation",
+      "Custom apps and AI workflow engines",
       "Approval, compliance and audit trails",
     ],
   },
   {
-    slug: "data-platforms",
-    icon: Database,
-    title: "Data Platforms",
+    slug: "power-energy-infrastructure",
+    icon: Zap,
+    title: "Power & Energy Infrastructure",
     summary:
-      "Reliable pipelines and warehouses so every dashboard, model and decision draws from one source of truth.",
+      "We eliminate operational downtime caused by power instability by deploying renewable energy systems and power solutions to ensure your home & business remains online 24/7.",
     capabilities: [
-      "Ingestion pipelines and ELT",
-      "Lakehouse and warehouse modelling",
-      "Governance, lineage and quality checks",
-      "Self-service analytics enablement",
+      "Solar and hybrid power design",
+      "UPS, inverter and battery systems",
+      "Site survey and load profiling",
+      "Remote monitoring and maintenance",
+    ],
+  },
+  {
+    slug: "strategic-technology-advisory",
+    icon: Compass,
+    title: "Strategic Technology Advisory",
+    summary:
+      "Align your technology roadmap directly with your core business objectives, to maximize productivity and eliminate operational costs.",
+    capabilities: [
+      "Technology roadmap and investment planning",
+      "Cost optimisation and vendor selection",
+      "Digital transformation programme design",
+      "Executive readouts and board reporting",
     ],
   },
 ];

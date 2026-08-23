@@ -161,7 +161,7 @@ function Home() {
         <Container className="py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold leading-[1.15] md:text-4xl">
-              Secure and integrated technology services
+              Secure and cost-effective technology services
             </h2>
             <p className="mt-4 text-primary-foreground/70">
               Most of our work sits where these areas overlap — a network decision is a security
@@ -174,7 +174,7 @@ function Home() {
                 key={s.slug}
                 to="/solutions"
                 hash={s.slug}
-                className="group rounded-2xl border border-primary-foreground/15 p-7 transition-colors hover:border-electric hover:bg-primary-foreground/5"
+                className="group rounded-2xl border border-primary-foreground/15 p-7 transition-colors hover:border-electric hover:bg-primary-foreground/5 last:lg:col-start-2"
               >
                 <div className="flex items-start justify-between gap-4">
                   <s.icon className="h-6 w-6 text-electric" aria-hidden />
