@@ -43,8 +43,18 @@ const benefits = [
   },
 ];
 
+const solutionCtas: Record<string, string> = {
+  network: "Optimize My Network",
+  cloud: "Explore Cloud Solutions",
+  security: "Secure My Business",
+  "managed-it": "Outsource Your IT Support",
+  automation: "Cut Operational Costs",
+  power: "Eliminate Power Downtime",
+  advisory: "Book a Strategic Advisory Consultation",
+};
 
 function Home() {
+  const advisory = solutions[6];
   return (
     <>
       {/* Hero */}
