@@ -213,6 +213,8 @@ export const solutions: Solution[] = [
     title: "Power & Energy Infrastructure",
     summary:
       "We eliminate operational downtime caused by power instability by deploying resilient renewable energy systems.",
+    ctaLabel: "Eliminate Power Downtime",
+    ctaHash: "power",
     capabilities: [
       "Solar and hybrid power design",
       "UPS, inverter and battery systems",
