@@ -88,7 +88,7 @@ function Home() {
                 <Button
                   asChild
                   size="lg"
-                  className="shrink-0 rounded-full bg-electric px-7 text-electric-foreground hover:bg-electric/90"
+                  className="w-full shrink-0 rounded-full bg-electric px-7 text-electric-foreground hover:bg-electric/90 md:w-auto"
                 >
                   <Link to="/solutions" hash={anchor.ctaHash}>
                     {anchor.ctaLabel}
