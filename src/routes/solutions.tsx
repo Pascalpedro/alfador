@@ -1,7 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check } from "lucide-react";
-import { PageHero, Section, SectionHeading } from "@/components/layout-primitives";
+import { PageHero, Section } from "@/components/layout-primitives";
 import { CTABand } from "@/components/CTABand";
+import { Button } from "@/components/ui/button";
 import { solutions } from "@/data/content";
 
 export const Route = createFileRoute("/solutions")({
@@ -26,134 +27,153 @@ export const Route = createFileRoute("/solutions")({
   component: Solutions,
 });
 
+const ctaMap: Record<
+  string,
+  { label: string; variant: "default" | "accent" }
+> = {
+  network: { label: "Request an Infrastructure Audit", variant: "default" },
+  cloud: { label: "Request an Infrastructure Audit", variant: "default" },
+  security: { label: "Request an Infrastructure Audit", variant: "default" },
+  "managed-it": {
+    label: "Schedule an Efficiency Assessment",
+    variant: "default",
+  },
+  automation: {
+    label: "Schedule an Efficiency Assessment",
+    variant: "default",
+  },
+  power: { label: "Request an Infrastructure Audit", variant: "default" },
+  advisory: {
+    label: "Book a Strategic Roadmap Session",
+    variant: "accent",
+  },
+};
+
 function Solutions() {
   return (
     <>
       <PageHero
         eyebrow="Solutions"
-        title="Infrastructure, intelligence and defence — engineered together."
-        description="Each capability stands on its own, but the value compounds when they're designed as one system with shared identity, telemetry and delivery pipelines."
+        title="Enterprise technology capabilities, delivered as one integrated system."
+        description="From network foundations and cloud platforms to AI automation, physical security, and strategic advisory — every service is designed to work together."
       />
 
-      <Section>
-        <div className="space-y-8">
-          {solutions.map((s, i) => (
-            <article
+      <Section className="pb-6 pt-10 md:pt-14">
+        <nav
+          aria-label="Solutions quick navigation"
+          className="flex flex-wrap gap-2 md:gap-3"
+        >
+          {solutions.map((s) => (
+            <Link
               key={s.slug}
-              id={s.anchor}
-              className="card-hover scroll-mt-24 rounded-3xl border border-border bg-card p-7 shadow-soft md:p-10"
+              to="/solutions"
+              hash={s.anchor}
+              className="rounded-full border border-border bg-secondary px-3.5 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-electric hover:text-electric md:text-sm"
             >
-              <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+              {s.title}
+            </Link>
+          ))}
+        </nav>
+      </Section>
+
+      {solutions.map((s, i) => {
+        const cta = ctaMap[s.anchor];
+        const isSurface = i % 2 === 1;
+
+        return (
+          <Section
+            key={s.slug}
+            id={s.anchor}
+            className={`scroll-mt-24 ${isSurface ? "bg-surface" : "bg-background"}`}
+          >
+            <div className="mx-auto max-w-5xl">
+              {/* Section header */}
+              <div className="flex items-start gap-4 md:gap-6">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-ink text-electric shadow-soft md:h-14 md:w-14">
+                  <s.icon className="h-5 w-5 md:h-6 md:w-6" aria-hidden />
+                </span>
                 <div className="min-w-0">
-                  <div className="flex items-center gap-3">
-                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-accent text-navy">
-                      <s.icon className="h-5 w-5" aria-hidden />
-                    </span>
-                    <span className="font-display text-sm font-semibold text-muted-foreground">
-                      0{i + 1}
-                    </span>
-                  </div>
-                  <h2 className="mt-5 text-2xl font-semibold leading-tight md:text-3xl">
+                  <span className="font-display text-sm font-semibold text-muted-foreground">
+                    0{i + 1}
+                  </span>
+                  <h2 className="mt-1 text-3xl font-semibold leading-tight md:text-4xl">
                     {s.title}
                   </h2>
-                  {s.tagline && (
-                    <p className="mt-2 text-base font-medium text-electric">
-                      {s.tagline}
-                    </p>
-                  )}
-                  <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                    {s.description || s.summary}
-                  </p>
-                </div>
-
-                <div className="space-y-6 md:content-center">
-                  {s.offerings && (
-                    <>
-                      <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-                        {s.offeringsLabel || "Core Offerings"}
-                      </h3>
-                      <div className="grid gap-6 sm:grid-cols-2">
-                        {s.offerings.map((group) => (
-                          <div key={group.title} className="space-y-3">
-                            <h4 className="font-semibold leading-snug">
-                              {group.title}
-                            </h4>
-                            {group.description && (
-                              <p className="text-sm leading-relaxed text-muted-foreground">
-                                {group.description}
-                              </p>
-                            )}
-                            <ul className="space-y-2">
-                              {group.items.map((item) => (
-                                <li
-                                  key={item}
-                                  className="flex items-start gap-2.5 text-sm leading-relaxed"
-                                >
-                                  <Check
-                                    className="mt-0.5 h-4 w-4 shrink-0 text-electric"
-                                    aria-hidden
-                                  />
-                                  <span>{item}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
-                      </div>
-                    </>
-                  )}
-
-                  {!s.offerings && (
-                    <ul className="grid gap-3 sm:grid-cols-2 md:content-center">
-                      {s.capabilities.map((c) => (
-                        <li
-                          key={c}
-                          className="flex items-start gap-2.5 text-sm leading-relaxed"
-                        >
-                          <Check
-                            className="mt-0.5 h-4 w-4 shrink-0 text-electric"
-                            aria-hidden
-                          />
-                          <span>{c}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
                 </div>
               </div>
-            </article>
-          ))}
-        </div>
-      </Section>
 
-      <Section className="pt-0">
-        <SectionHeading
-          align="center"
-          eyebrow="Engagement models"
-          title="Work with us the way that fits."
-        />
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {[
-            {
-              t: "Advisory",
-              d: "Architecture reviews, security assessments and roadmaps with costed options.",
-            },
-            {
-              t: "Build",
-              d: "Dedicated delivery squads embedded alongside your engineers until it's in production.",
-            },
-            {
-              t: "Managed",
-              d: "Ongoing monitoring, patching, detection and response after go-live.",
-            },
-          ].map((m) => (
-            <div key={m.t} className="rounded-2xl border border-border bg-secondary/50 p-7">
-              <h3 className="text-lg font-semibold">{m.t}</h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{m.d}</p>
+              {s.tagline && (
+                <p className="mt-4 max-w-3xl text-lg italic leading-relaxed text-electric md:text-xl">
+                  {s.tagline}
+                </p>
+              )}
+
+              {s.description && (
+                <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">
+                  {s.description}
+                </p>
+              )}
+
+              {/* Core offerings */}
+              <div className="mt-12">
+                <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+                  {s.offeringsLabel || "Core Offerings"}
+                </h3>
+
+                <div className="mt-6 grid gap-6 md:grid-cols-2">
+                  {s.offerings?.map((group) => (
+                    <div
+                      key={group.title}
+                      className="rounded-2xl border border-border bg-card p-6 shadow-soft md:p-8"
+                    >
+                      <h4 className="text-lg font-semibold leading-snug md:text-xl">
+                        {group.title}
+                      </h4>
+                      {group.description && (
+                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
+                          {group.description}
+                        </p>
+                      )}
+                      <ul className="mt-5 space-y-3">
+                        {group.items.map((item) => (
+                          <li
+                            key={item}
+                            className="flex items-start gap-3 text-sm leading-relaxed md:text-base"
+                          >
+                            <Check
+                              className="mt-0.5 h-4 w-4 shrink-0 text-electric"
+                              aria-hidden
+                            />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+                <Button
+                  asChild
+                  size="lg"
+                  className={
+                    cta.variant === "accent"
+                      ? "rounded-full bg-electric px-8 text-electric-foreground hover:bg-electric/90"
+                      : "rounded-full bg-ink px-8 text-white hover:bg-ink/90"
+                  }
+                >
+                  <Link to="/contact">{cta.label}</Link>
+                </Button>
+                <span className="text-sm text-muted-foreground">
+                  No commitment required. We&apos;ll reply within one business day.
+                </span>
+              </div>
             </div>
-          ))}
-        </div>
-      </Section>
+          </Section>
+        );
+      })}
 
       <CTABand title="Not sure which capability you need?" />
     </>
