@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
-import lockup from "@/assets/alfador-lockup.png.asset.json";
+import lockup from "@/assets/alfador-lockup.png";
 
 export function Footer() {
   return (
@@ -10,7 +10,7 @@ export function Footer() {
           <div className="min-w-0">
             <div className="overflow-hidden rounded-2xl border border-primary-foreground/10">
               <img
-                src={lockup.url}
+                src={lockup}
                 alt="Alfador Technologies Ltd — Bridging business and technology"
                 width={627}
                 height={406}
