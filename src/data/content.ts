@@ -105,6 +105,8 @@ export const solutions: Solution[] = [
     title: "Business Security & Compliance",
     summary:
       "We protect your assets from cyber threats, data loss, unauthorized access and physical security breaches.",
+    ctaLabel: "Secure My Business",
+    ctaHash: "security",
     capabilities: [
       "Security architecture and zero-trust identity",
       "Vulnerability management and pen testing",
