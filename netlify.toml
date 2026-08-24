@@ -1,0 +1,22 @@
+# Netlify deployment for the Alfador TanStack Start (Nitro) app.
+#
+# `bun run build` runs `vite build`, which runs Nitro with the `netlify` preset
+# (configured in vite.config.ts). That preset emits:
+#   dist/                              -> static client assets (publish dir)
+#   .netlify/functions-internal/server -> the SSR serverless function
+# The SSR function declares `path = "/*"` with `preferStatic = true` in its own
+# generated config, so no _redirects rule is needed here.
+
+[build]
+  command = "bun install && bun run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[context.production]
+  command = "bun install && bun run build"
+
+# Only build/deploy the production site from `main`.
+[context.branch-deploy]
+  command = "bun install && bun run build"
