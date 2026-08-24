@@ -9,6 +9,7 @@ export type OfferingGroup = {
 
 export type Solution = {
   slug: string;
+  anchor: string;
   icon: LucideIcon;
   title: string;
   summary: string;
@@ -22,6 +23,7 @@ export type Solution = {
 export const solutions: Solution[] = [
   {
     slug: "network-infrastructure-solutions",
+    anchor: "network",
     icon: Network,
     title: "Network Infrastructure Solutions",
     summary:
@@ -60,6 +62,7 @@ export const solutions: Solution[] = [
   },
   {
     slug: "cloud-infrastructure",
+    anchor: "cloud",
     icon: Cloud,
     title: "Cloud Infrastructure",
     summary:
@@ -95,6 +98,7 @@ export const solutions: Solution[] = [
   },
   {
     slug: "business-security-compliance",
+    anchor: "security",
     icon: ShieldCheck,
     title: "Business Security & Compliance",
     summary:
@@ -135,6 +139,7 @@ export const solutions: Solution[] = [
   },
   {
     slug: "managed-it-services",
+    anchor: "managed-it",
     icon: Monitor,
     title: "Managed IT Services",
     summary:
@@ -166,6 +171,7 @@ export const solutions: Solution[] = [
   },
   {
     slug: "ai-business-automation",
+    anchor: "automation",
     icon: Cpu,
     title: "AI & Business Automation",
     summary:
@@ -197,6 +203,7 @@ export const solutions: Solution[] = [
   },
   {
     slug: "power-energy-infrastructure",
+    anchor: "power",
     icon: Zap,
     title: "Power & Energy Infrastructure",
     summary:
@@ -230,6 +237,7 @@ export const solutions: Solution[] = [
   },
   {
     slug: "strategic-technology-advisory",
+    anchor: "advisory",
     icon: Compass,
     title: "Strategic Technology Advisory",
     summary:

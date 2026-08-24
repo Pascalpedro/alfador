@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight, Check, Star } from "lucide-react";
+import { ArrowRight, Check, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container, Section } from "@/components/layout-primitives";
 import { CTABand } from "@/components/CTABand";
@@ -43,8 +43,18 @@ const benefits = [
   },
 ];
 
+const solutionCtas: Record<string, string> = {
+  network: "Optimize My Network",
+  cloud: "Explore Cloud Solutions",
+  security: "Secure My Business",
+  "managed-it": "Outsource Your IT Support",
+  automation: "Cut Operational Costs",
+  power: "Eliminate Power Downtime",
+  advisory: "Book a Strategic Advisory Consultation",
+};
 
 function Home() {
+  const advisory = solutions[6];
   return (
     <>
       {/* Hero */}
@@ -135,38 +145,66 @@ function Home() {
       {/* Services — dark */}
       <div className="bg-ink text-primary-foreground">
         <Container className="py-20 md:py-28">
-          <div className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-semibold leading-[1.15] md:text-4xl">
               End-to-End Technology & Infrastructure Solutions
             </h2>
-            <p className="mt-4 text-primary-foreground/70">
-              In modern business, technology is entirely interconnected—an infrastructure choice is
-              a security choice, an automation plan is a productivity plan, and our integrated
-              solutions are a cost-reduction plan.
+            <p className="mt-5 text-base leading-relaxed text-primary-foreground/70 md:text-lg">
+              In modern business, technology is entirely interconnected.
+              <br className="hidden sm:block" /> An infrastructure choice is a security choice, an
+              automation plan is a productivity plan, and our integrated solutions are a
+              cost-reduction plan.
             </p>
           </div>
+
           <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {solutions.map((s) => (
-              <Link
+            {solutions.slice(0, 6).map((s) => (
+              <div
                 key={s.slug}
-                to="/solutions"
-                hash={s.slug}
-                className="group rounded-2xl border border-primary-foreground/15 p-7 transition-colors hover:border-electric hover:bg-primary-foreground/5 last:lg:col-start-2"
+                className="flex flex-col rounded-2xl border border-primary-foreground/10 bg-primary-foreground/[0.02] p-6 backdrop-blur-sm transition-colors hover:border-electric/40 sm:p-7"
               >
-                <div className="flex items-start justify-between gap-4">
-                  <s.icon className="h-6 w-6 text-electric" aria-hidden />
-                  <ArrowUpRight
-                    className="h-5 w-5 shrink-0 text-primary-foreground/50 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-electric"
-                    aria-hidden
-                  />
-                </div>
-                <h3 className="mt-10 text-base font-semibold">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-primary-foreground/60">
+                <h3 className="text-lg font-semibold leading-tight">{s.title}</h3>
+                <p className="mt-2.5 flex-1 text-sm leading-relaxed text-primary-foreground/65">
                   {s.summary}
                 </p>
-              </Link>
+                <Button
+                  asChild
+                  size="sm"
+                  className="mt-6 w-full rounded-full bg-electric text-electric-foreground hover:bg-electric/90 sm:w-auto sm:self-start"
+                >
+                  <Link to="/solutions" hash={s.anchor}>
+                    {solutionCtas[s.anchor]}
+                    <ArrowRight className="ml-1.5 h-4 w-4" aria-hidden />
+                  </Link>
+                </Button>
+              </div>
             ))}
           </div>
+
+          {advisory && (
+            <div className="mt-4 rounded-3xl border border-primary-foreground/10 bg-gradient-to-r from-electric/10 to-transparent p-7 sm:p-10">
+              <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+                <div className="max-w-2xl">
+                  <h3 className="text-xl font-semibold leading-tight md:text-2xl">
+                    {advisory.title}
+                  </h3>
+                  <p className="mt-2.5 text-sm leading-relaxed text-primary-foreground/65 md:text-base">
+                    {advisory.summary}
+                  </p>
+                </div>
+                <Button
+                  asChild
+                  size="lg"
+                  className="shrink-0 rounded-full bg-electric px-6 text-electric-foreground hover:bg-electric/90"
+                >
+                  <Link to="/solutions" hash={advisory.anchor}>
+                    {solutionCtas[advisory.anchor]}
+                    <ArrowRight className="ml-1.5 h-4 w-4" aria-hidden />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          )}
         </Container>
       </div>
 
