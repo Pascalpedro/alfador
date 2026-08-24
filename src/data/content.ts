@@ -1,26 +1,61 @@
 import type { LucideIcon } from "lucide-react";
 import { Cloud, Cpu, Network, ShieldCheck, Workflow, Zap, Compass, Monitor } from "lucide-react";
 
+export type OfferingGroup = {
+  title: string;
+  description?: string;
+  items: string[];
+};
+
 export type Solution = {
   slug: string;
   icon: LucideIcon;
   title: string;
   summary: string;
   capabilities: string[];
+  tagline?: string;
+  description?: string;
+  offeringsLabel?: string;
+  offerings?: OfferingGroup[];
 };
 
 export const solutions: Solution[] = [
   {
-    slug: "network-solutions",
+    slug: "network-infrastructure-solutions",
     icon: Network,
     title: "Network Infrastructure Solutions",
     summary:
-      "We connect your offices, people, and systems into one seamless, reliable communication and technology environment.",
+      "We connect your offices, people, and systems into one seamless, reliable technology environment.",
     capabilities: [
       "Structured cabling & data centre build-out",
       "SD-WAN and multi-site connectivity",
       "Network segmentation and zero-trust access",
       "Monitoring, capacity planning and NOC handover",
+    ],
+    tagline: "Connected Networks. Unified Communications.",
+    offerings: [
+      {
+        title: "Data & Connectivity",
+        description:
+          "Deploying robust local Area Networks (LAN), software-defined wide area networking (SD-WAN), and high-capacity wireless access points.",
+        items: [
+          "Office networking & multi-branch connectivity",
+          "Business Wi-Fi solutions & VPN deployment",
+          "Structured cabling & infrastructure upgrades",
+          "Systems integration",
+        ],
+      },
+      {
+        title: "Unified Business Voice",
+        description:
+          "Structuring unified communication networks using IP-PBX controllers and VOIP systems for internal business environments.",
+        items: [
+          "Cloud & Hosted PBX / PABX systems",
+          "Corporate User Groups (CUG) & SIP Trunks",
+          "VoIP services & advanced call features",
+          "Office intercom systems",
+        ],
+      },
     ],
   },
   {
@@ -28,12 +63,34 @@ export const solutions: Solution[] = [
     icon: Cloud,
     title: "Cloud Infrastructure",
     summary:
-      "We provide flexible cloud solutions to build, run, and scale your business with confidence.",
+      "We provide flexible cloud environments to run, protect, and scale your business operations with confidence.",
     capabilities: [
       "AWS / Azure / GCP landing zones",
       "Terraform, Kubernetes and GitOps",
       "CI/CD pipelines and release automation",
       "Cost optimisation and observability",
+    ],
+    tagline: "Scalable. Secure. Reliable.",
+    description:
+      "We build reliable technology foundations and scalable cloud architectures to help your business transition away from expensive physical servers, reduce upfront hardware costs, and enable seamless remote work.",
+    offerings: [
+      {
+        title: "Cloud & Hosting Services",
+        items: [
+          "Cloud migration & architecture strategy",
+          "Server deployment",
+          "Cloud hosting",
+          "Hybrid cloud environments",
+        ],
+      },
+      {
+        title: "Infrastructure Modernization",
+        items: [
+          "Infrastructure modernization & upgrades",
+          "Secure backup",
+          "Disaster recovery integration",
+        ],
+      },
     ],
   },
   {
@@ -41,12 +98,39 @@ export const solutions: Solution[] = [
     icon: ShieldCheck,
     title: "Business Security & Compliance",
     summary:
-      "We protect your home & business from cyber threats, data loss, unauthorized access and physical security breaches.",
+      "We protect your assets from cyber threats, data loss, unauthorized access and physical security breaches.",
     capabilities: [
       "Security architecture and zero-trust identity",
       "Vulnerability management and pen testing",
       "SIEM, detection engineering and response",
       "ISO 27001 / NDPR / GDPR readiness",
+    ],
+    tagline:
+      "Enterprise-grade security to safeguard your data, networks, operations and physical premises.",
+    offerings: [
+      {
+        title: "Cybersecurity & Compliance",
+        description:
+          "Protecting endpoints, local servers, and cloud resources via continuous threat detection and multi-layered defenses. Enforcing zero-trust network access, robust firewall management, and strict identity governance. Securing specialized industry compliance mandates for highly regulated fields like healthcare and financial services.",
+        items: [
+          "Data protection advisory & compliance support (NDPA/NDPB)",
+          "System security assessments & vulnerability management",
+          "Endpoint, email, firewall, and UTM protection",
+          "DDoS protection & identity/access management",
+          "Secure backup & disaster recovery",
+          "24/7 security monitoring",
+        ],
+      },
+      {
+        title: "Intelligent Physical Surveillance",
+        items: [
+          "Smart home and business security integration",
+          "Smart security & 4G surveillance cameras",
+          "Intelligent security alert & alarm systems",
+          "Smart doorbell cameras",
+          "Access Control systems",
+        ],
+      },
     ],
   },
   {
@@ -54,12 +138,30 @@ export const solutions: Solution[] = [
     icon: Monitor,
     title: "Managed IT Services",
     summary:
-      "We provide end-to-end IT support so you can focus on what matters most—your business.",
+      "We provide end-to-end IT support and proactive management so you can focus entirely on growing your business.",
     capabilities: [
       "24/7 monitoring and service desk",
       "Patching, backup and disaster recovery",
       "Endpoint and server management",
       "Vendor management and IT roadmapping",
+    ],
+    tagline: "End-to-end IT support.",
+    description:
+      "We become your technology department, keeping your systems running while you focus on your business.",
+    offerings: [
+      {
+        title: "Managed IT Services",
+        items: [
+          "IT outsourcing",
+          "Remote System monitoring",
+          "Helpdesk Support",
+          "Device management",
+          "Patch management",
+          "Software updates",
+          "Network Monitoring",
+          "Vendor management",
+        ],
+      },
     ],
   },
   {
@@ -67,12 +169,30 @@ export const solutions: Solution[] = [
     icon: Cpu,
     title: "AI & Business Automation",
     summary:
-      "We minimize repetitive work, manual processes, and cut operational costs through custom software and AI workflow engines.",
+      "We minimize repetitive work, manual processes, and cut operational costs through custom software and AI workflows.",
     capabilities: [
       "Process discovery and workflow design",
       "System integration and API orchestration",
       "Custom apps and AI workflow engines",
       "Approval, compliance and audit trails",
+    ],
+    offerings: [
+      {
+        title: "Custom Software & Applications",
+        items: [
+          "Custom web applications & internal systems",
+          "Dedicated customer portals",
+          "Tailored business applications & integrations",
+        ],
+      },
+      {
+        title: "Workflow & Intelligent Automation",
+        items: [
+          "End-to-end workflow automation",
+          "AI-powered automation solutions",
+          "Process digitization to eliminate manual error",
+        ],
+      },
     ],
   },
   {
@@ -80,12 +200,32 @@ export const solutions: Solution[] = [
     icon: Zap,
     title: "Power & Energy Infrastructure",
     summary:
-      "We eliminate operational downtime caused by power instability by deploying renewable energy systems and power solutions.",
+      "We eliminate operational downtime caused by power instability by deploying resilient renewable energy systems.",
     capabilities: [
       "Solar and hybrid power design",
       "UPS, inverter and battery systems",
       "Site survey and load profiling",
       "Remote monitoring and maintenance",
+    ],
+    offeringsLabel: "Our Core Capabilities",
+    offerings: [
+      {
+        title: "Sustainable Power Deployments",
+        items: [
+          "Solar & Hybrid Power Systems: Designing and installing independent solar networks to reduce dependency on the local grid.",
+          "Robust backup Power Solutions: Implementing robust inverter and generator backup systems tailored for business continuity.",
+          "Solar-Hybrid grid Integration: Optimizing existing power setups to switch seamlessly between solar, batteries, and grid power.",
+          "Smart Power Infrastructure: Building modern electrical distribution systems equipped with Energy Monitoring to track and reduce your power consumption costs.",
+        ],
+      },
+      {
+        title: "Infrastructure Maintenance & Technical Support",
+        items: [
+          "Power and Infrastructure Maintenance: Proactive servicing of energy hardware to extend asset lifespan and prevent sudden failures.",
+          "Server & GPU Servicing: Specialized maintenance and repair for high-performance computing units used in local data processing.",
+          "Physical network Hardware cabinets Setup: Deploying stable physical network cabinets and routing hardware to support automated facility systems.",
+        ],
+      },
     ],
   },
   {
@@ -93,12 +233,37 @@ export const solutions: Solution[] = [
     icon: Compass,
     title: "Strategic Technology Advisory",
     summary:
-      "We align your technology roadmap directly with your core business objectives.",
+      "We align your technology roadmap directly with your core business objectives to drive long-term growth.",
     capabilities: [
       "Technology roadmap and investment planning",
       "Cost optimisation and vendor selection",
       "Digital transformation programme design",
       "Executive readouts and board reporting",
+    ],
+    offeringsLabel: "Our Core Capabilities",
+    offerings: [
+      {
+        title: "Strategic Planning & Roadmapping",
+        items: [
+          "Technology Strategy & Execution: Designing long-term IT roadmaps aligned with business growth.",
+          "Cloud Roadmap Development: Strategic planning for migrating legacy systems to scalable cloud architectures.",
+          "Digital Transformation: Overhauling manual processes with modern digital frameworks to increase efficiency.",
+        ],
+      },
+      {
+        title: "Governance, Compliance & Audits",
+        items: [
+          "IT Audits & Assessments: Comprehensive health checks of current systems to find security gaps and operational bottlenecks.",
+          "IT Governance & Risk Management: Establishing framework controls, tech policies, and compliance standards.",
+        ],
+      },
+      {
+        title: "Procurement & Delivery Excellence",
+        items: [
+          "Technology Procurement Advisory & vendor negotiation: Guiding vendor selection and software negotiation to maximize ROI and cut licensing waste.",
+          "Project Management Office (PMO) oversight: Overseeing complex technology deployments to ensure they finish on time and within budget.",
+        ],
+      },
     ],
   },
 ];
