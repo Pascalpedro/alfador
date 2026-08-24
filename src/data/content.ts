@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Cloud, Cpu, Network, ShieldCheck, Workflow, Zap, Compass, Monitor } from "lucide-react";
+import { Cloud, Cpu, Network, ShieldCheck, Zap, Compass, Monitor } from "lucide-react";
 
 export type OfferingGroup = {
   title: string;
@@ -35,6 +35,8 @@ export const solutions: Solution[] = [
       "Monitoring, capacity planning and NOC handover",
     ],
     tagline: "Connected Networks. Unified Communications.",
+    description:
+      "We design, deploy, and manage high-performance network environments that keep your people, devices, and locations connected without compromise.",
     offerings: [
       {
         title: "Data & Connectivity",
@@ -73,25 +75,30 @@ export const solutions: Solution[] = [
       "CI/CD pipelines and release automation",
       "Cost optimisation and observability",
     ],
-    tagline: "Scalable. Secure. Reliable.",
+    tagline: "Scalable Architectures. Modern Infrastructure. Secure Transitions.",
     description:
       "We build reliable technology foundations and scalable cloud architectures to help your business transition away from expensive physical servers, reduce upfront hardware costs, and enable seamless remote work.",
     offerings: [
       {
         title: "Cloud & Hosting Services",
+        description:
+          "Migrating legacy workloads and deploying scalable virtual environments to eliminate expensive physical servers and enable seamless remote operations.",
         items: [
-          "Cloud migration & architecture strategy",
-          "Server deployment",
-          "Cloud hosting",
-          "Hybrid cloud environments",
+          "Cloud migration, strategy, and architecture design",
+          "Virtual server deployment and orchestration",
+          "Managed cloud hosting solutions",
+          "Hybrid and multi-cloud environment optimization",
         ],
       },
       {
         title: "Infrastructure Modernization",
+        description:
+          "Overhauling outdated physical frameworks and integrating comprehensive data redundancy protocols to protect business operational continuity.",
         items: [
-          "Infrastructure modernization & upgrades",
-          "Secure backup",
-          "Disaster recovery integration",
+          "Infrastructure modernization and legacy hardware upgrades",
+          "Secure automated backup frameworks",
+          "Disaster recovery integration and failover testing",
+          "Scalable storage area network (SAN) deployment",
         ],
       },
     ],
@@ -109,30 +116,33 @@ export const solutions: Solution[] = [
       "SIEM, detection engineering and response",
       "ISO 27001 / NDPR / GDPR readiness",
     ],
-    tagline:
-      "Enterprise-grade security to safeguard your data, networks, operations and physical premises.",
+    tagline: "Multilayered Defense. Zero-Trust Access. Total Enterprise Protection.",
+    description:
+      "We protect your assets from cyber threats, data loss, unauthorized access and physical security breaches with enterprise-grade security tailored to your operations.",
     offerings: [
       {
         title: "Cybersecurity & Compliance",
         description:
-          "Protecting endpoints, local servers, and cloud resources via continuous threat detection and multi-layered defenses. Enforcing zero-trust network access, robust firewall management, and strict identity governance. Securing specialized industry compliance mandates for highly regulated fields like healthcare and financial services.",
+          "Protecting endpoints, local servers, and cloud resources via continuous threat detection, robust firewall management, and strict industry compliance governance.",
         items: [
-          "Data protection advisory & compliance support (NDPA/NDPB)",
+          "Data protection advisory & regulatory compliance support (NDPA/NDPB)",
           "System security assessments & vulnerability management",
           "Endpoint, email, firewall, and UTM protection",
-          "DDoS protection & identity/access management",
-          "Secure backup & disaster recovery",
-          "24/7 security monitoring",
+          "DDoS mitigation & advanced identity/access management (IAM)",
+          "Secure backup architectures & automated disaster recovery",
+          "24/7 continuous security monitoring & threat response",
         ],
       },
       {
         title: "Intelligent Physical Surveillance",
+        description:
+          "Securing physical business perimeters and smart facilities with high-definition tracking hardware, active access controls, and automated alert telemetry.",
         items: [
-          "Smart home and business security integration",
-          "Smart security & 4G surveillance cameras",
-          "Intelligent security alert & alarm systems",
-          "Smart doorbell cameras",
-          "Access Control systems",
+          "Smart commercial & residential security integration",
+          "High-definition smart security & 4G surveillance cameras",
+          "Intelligent real-time security alert & alarm systems",
+          "Connected smart doorbell cameras & intercom integrations",
+          "Biometric, card, and proximity Access Control systems",
         ],
       },
     ],
@@ -150,21 +160,30 @@ export const solutions: Solution[] = [
       "Endpoint and server management",
       "Vendor management and IT roadmapping",
     ],
-    tagline: "End-to-end IT support.",
+    tagline: "Proactive Support. Seamless Monitoring. Complete Technical Peace of Mind.",
     description:
       "We become your technology department, keeping your systems running while you focus on your business.",
     offerings: [
       {
-        title: "Managed IT Services",
+        title: "Managed IT Operations",
+        description:
+          "Serving as your dedicated, fully outsourced technology department to handle day-to-day administrative tasks, user support, and third-party vendor coordination.",
         items: [
-          "IT outsourcing",
-          "Remote System monitoring",
-          "Helpdesk Support",
-          "Device management",
-          "Patch management",
-          "Software updates",
-          "Network Monitoring",
-          "Vendor management",
+          "Full-scale IT outsourcing & on-site technical staffing",
+          "Helpdesk technical support & multi-tiered troubleshooting",
+          "Comprehensive endpoint device management",
+          "Strategic IT vendor management & software asset tracking",
+        ],
+      },
+      {
+        title: "Systems & Network Monitoring",
+        description:
+          "Deploying real-time monitoring tools to actively track infrastructure performance, push security updates, and resolve bottlenecks before they disrupt operations.",
+        items: [
+          "Remote system monitoring & predictive analytics",
+          "Automated patch management & software updates",
+          "Proactive network performance monitoring & traffic optimization",
+          "Server health tracking & uptime assurance",
         ],
       },
     ],
@@ -182,21 +201,30 @@ export const solutions: Solution[] = [
       "Custom apps and AI workflow engines",
       "Approval, compliance and audit trails",
     ],
+    tagline: "Intelligent Workflows. Custom Applications. Eliminating Manual Inefficiencies.",
+    description:
+      "We minimize repetitive work, manual processes, and cut operational costs through custom software and AI workflows that scale with your business.",
     offerings: [
       {
         title: "Custom Software & Applications",
+        description:
+          "Engineering bespoke software platforms and dedicated digital entry points to unify your internal business systems and improve customer engagement.",
         items: [
-          "Custom web applications & internal systems",
-          "Dedicated customer portals",
-          "Tailored business applications & integrations",
+          "Custom web applications & internal management systems",
+          "Dedicated customer and partner portal engineering",
+          "Tailored business application development & API integrations",
+          "Legacy software modernization",
         ],
       },
       {
         title: "Workflow & Intelligent Automation",
+        description:
+          "Designing autonomous end-to-end workflow engines and AI models that handle repetitive tasks, reduce human error, and cut operational costs.",
         items: [
-          "End-to-end workflow automation",
-          "AI-powered automation solutions",
-          "Process digitization to eliminate manual error",
+          "End-to-end business workflow automation",
+          "AI-powered automation solutions & agentic processing",
+          "Business process digitization to eliminate manual data entry",
+          "System-to-system data synchronization workflows",
         ],
       },
     ],
@@ -214,23 +242,30 @@ export const solutions: Solution[] = [
       "Site survey and load profiling",
       "Remote monitoring and maintenance",
     ],
-    offeringsLabel: "Our Core Capabilities",
+    tagline: "Resilient Energy. Uninterrupted Uptime. Sustainable Clean Power.",
+    description:
+      "We eliminate operational downtime caused by power instability by deploying resilient renewable energy systems and intelligent backup infrastructure.",
     offerings: [
       {
         title: "Sustainable Power Deployments",
+        description:
+          "Designing and installing autonomous renewable energy architectures and robust hybrid backup systems to eliminate grid-instability downtime.",
         items: [
-          "Solar & Hybrid Power Systems: Designing and installing independent solar networks to reduce dependency on the local grid.",
-          "Robust backup Power Solutions: Implementing robust inverter and generator backup systems tailored for business continuity.",
-          "Solar-Hybrid grid Integration: Optimizing existing power setups to switch seamlessly between solar, batteries, and grid power.",
-          "Smart Power Infrastructure: Building modern electrical distribution systems equipped with Energy Monitoring to track and reduce your power consumption costs.",
+          "Independent solar array & hybrid power network engineering",
+          "High-capacity inverter and backup generator integration",
+          "Solar-hybrid grid optimization and automated transfer switching",
+          "Smart power infrastructure & real-time energy consumption monitoring",
         ],
       },
       {
         title: "Infrastructure Maintenance & Technical Support",
+        description:
+          "Providing technical upkeep for critical facility hardware, local high-performance processing hardware, and server enclosures to prevent unexpected failures.",
         items: [
-          "Power and Infrastructure Maintenance: Proactive servicing of energy hardware to extend asset lifespan and prevent sudden failures.",
-          "Server & GPU Servicing: Specialized maintenance and repair for high-performance computing units used in local data processing.",
-          "Physical network Hardware cabinets Setup: Deploying stable physical network cabinets and routing hardware to support automated facility systems.",
+          "Proactive energy hardware servicing & component lifecycle extensions",
+          "Specialized high-performance server & GPU hardware servicing",
+          "Structured physical network hardware cabinet & enclosure setup",
+          "Facility power distribution audits & safety testing",
         ],
       },
     ],
@@ -248,28 +283,30 @@ export const solutions: Solution[] = [
       "Digital transformation programme design",
       "Executive readouts and board reporting",
     ],
-    offeringsLabel: "Our Core Capabilities",
+    tagline: "Aligned Roadmaps. Governed Risk. Maximized Technology ROI.",
+    description:
+      "We align your technology roadmap directly with your core business objectives to drive long-term growth and maximize return on every technology investment.",
     offerings: [
       {
         title: "Strategic Planning & Roadmapping",
+        description:
+          "Architecting long-term technology strategies that transform technical investments into direct drivers of commercial efficiency and digital expansion.",
         items: [
-          "Technology Strategy & Execution: Designing long-term IT roadmaps aligned with business growth.",
-          "Cloud Roadmap Development: Strategic planning for migrating legacy systems to scalable cloud architectures.",
-          "Digital Transformation: Overhauling manual processes with modern digital frameworks to increase efficiency.",
+          "Long-term technology strategy design & tactical execution",
+          "Legacy-to-cloud migration roadmap development",
+          "Comprehensive digital transformation & modernization frameworks",
+          "Business alignment workshops & technical capacity planning",
         ],
       },
       {
-        title: "Governance, Compliance & Audits",
+        title: "Governance, Compliance & Excellence",
+        description:
+          "Auditing existing systems to locate operational bottlenecks while supervising procurement negotiations and project delivery to eliminate budget waste.",
         items: [
-          "IT Audits & Assessments: Comprehensive health checks of current systems to find security gaps and operational bottlenecks.",
-          "IT Governance & Risk Management: Establishing framework controls, tech policies, and compliance standards.",
-        ],
-      },
-      {
-        title: "Procurement & Delivery Excellence",
-        items: [
-          "Technology Procurement Advisory & vendor negotiation: Guiding vendor selection and software negotiation to maximize ROI and cut licensing waste.",
-          "Project Management Office (PMO) oversight: Overseeing complex technology deployments to ensure they finish on time and within budget.",
+          "IT health checks, architectural audits, & security gap assessments",
+          "IT governance frameworks, risk management controls, & tech policies",
+          "Technology procurement advisory & high-leverage vendor negotiation",
+          "Project Management Office (PMO) oversight & complex deployment delivery",
         ],
       },
     ],
