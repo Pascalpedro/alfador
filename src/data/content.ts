@@ -12,6 +12,8 @@ export type Solution = {
   icon: LucideIcon;
   title: string;
   summary: string;
+  ctaLabel: string;
+  ctaHash: string;
   capabilities: string[];
   tagline?: string;
   description?: string;
