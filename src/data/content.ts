@@ -180,6 +180,8 @@ export const solutions: Solution[] = [
     title: "AI & Business Automation",
     summary:
       "We minimize repetitive work, manual processes, and cut operational costs through custom software and AI workflows.",
+    ctaLabel: "Cut Operational Costs",
+    ctaHash: "automation",
     capabilities: [
       "Process discovery and workflow design",
       "System integration and API orchestration",
