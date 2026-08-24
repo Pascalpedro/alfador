@@ -28,6 +28,8 @@ export const solutions: Solution[] = [
     title: "Network Infrastructure Solutions",
     summary:
       "We connect your offices, people, and systems into one seamless, reliable technology environment.",
+    ctaLabel: "Optimize My Network",
+    ctaHash: "network",
     capabilities: [
       "Structured cabling & data centre build-out",
       "SD-WAN and multi-site connectivity",
