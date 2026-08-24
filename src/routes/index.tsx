@@ -8,13 +8,13 @@ import { solutions } from "@/data/content";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Alfador — Bridging Business and Technology" },
+      { title: "End-to-End Technology & Infrastructure Solutions | Alfador" },
       {
         name: "description",
         content:
           "Alfador designs, implements and maintains intelligent IT solutions: network infrastructure, cloud infrastructure, business security, managed IT services, AI & automation, power & energy, and strategic technology advisory.",
       },
-      { property: "og:title", content: "Alfador — Bridging Business and Technology" },
+      { property: "og:title", content: "End-to-End Technology & Infrastructure Solutions | Alfador" },
       {
         property: "og:description",
         content:
