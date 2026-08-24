@@ -12,8 +12,6 @@ export type Solution = {
   icon: LucideIcon;
   title: string;
   summary: string;
-  ctaLabel: string;
-  ctaHash: string;
   capabilities: string[];
   tagline?: string;
   description?: string;
@@ -28,8 +26,6 @@ export const solutions: Solution[] = [
     title: "Network Infrastructure Solutions",
     summary:
       "We connect your offices, people, and systems into one seamless, reliable technology environment.",
-    ctaLabel: "Optimize My Network",
-    ctaHash: "network",
     capabilities: [
       "Structured cabling & data centre build-out",
       "SD-WAN and multi-site connectivity",
@@ -68,8 +64,6 @@ export const solutions: Solution[] = [
     title: "Cloud Infrastructure",
     summary:
       "We provide flexible cloud environments to run, protect, and scale your business operations with confidence.",
-    ctaLabel: "Explore Cloud Solutions",
-    ctaHash: "cloud",
     capabilities: [
       "AWS / Azure / GCP landing zones",
       "Terraform, Kubernetes and GitOps",
@@ -105,8 +99,6 @@ export const solutions: Solution[] = [
     title: "Business Security & Compliance",
     summary:
       "We protect your assets from cyber threats, data loss, unauthorized access and physical security breaches.",
-    ctaLabel: "Secure My Business",
-    ctaHash: "security",
     capabilities: [
       "Security architecture and zero-trust identity",
       "Vulnerability management and pen testing",
@@ -147,8 +139,6 @@ export const solutions: Solution[] = [
     title: "Managed IT Services",
     summary:
       "We provide end-to-end IT support and proactive management so you can focus entirely on growing your business.",
-    ctaLabel: "Outsource Your IT Support",
-    ctaHash: "managed-it",
     capabilities: [
       "24/7 monitoring and service desk",
       "Patching, backup and disaster recovery",
@@ -180,8 +170,6 @@ export const solutions: Solution[] = [
     title: "AI & Business Automation",
     summary:
       "We minimize repetitive work, manual processes, and cut operational costs through custom software and AI workflows.",
-    ctaLabel: "Cut Operational Costs",
-    ctaHash: "automation",
     capabilities: [
       "Process discovery and workflow design",
       "System integration and API orchestration",
@@ -213,8 +201,6 @@ export const solutions: Solution[] = [
     title: "Power & Energy Infrastructure",
     summary:
       "We eliminate operational downtime caused by power instability by deploying resilient renewable energy systems.",
-    ctaLabel: "Eliminate Power Downtime",
-    ctaHash: "power",
     capabilities: [
       "Solar and hybrid power design",
       "UPS, inverter and battery systems",
@@ -248,8 +234,6 @@ export const solutions: Solution[] = [
     title: "Strategic Technology Advisory",
     summary:
       "We align your technology roadmap directly with your core business objectives to drive long-term growth.",
-    ctaLabel: "Book a Strategic Advisory Consultation",
-    ctaHash: "advisory",
     capabilities: [
       "Technology roadmap and investment planning",
       "Cost optimisation and vendor selection",

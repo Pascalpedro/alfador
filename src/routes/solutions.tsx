@@ -40,7 +40,7 @@ function Solutions() {
           {solutions.map((s, i) => (
             <article
               key={s.slug}
-              id={s.ctaHash}
+              id={s.slug}
               className="card-hover scroll-mt-24 rounded-3xl border border-border bg-card p-7 shadow-soft md:p-10"
             >
               <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
