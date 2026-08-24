@@ -1,11 +1,11 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/alfador-logo.png.asset.json";
+import logo from "@/assets/alfador-logo.png";
 
 export function Logo({ className = "" }: { className?: string }) {
   return (
     <Link to="/" className={`group flex items-center gap-3 ${className}`} aria-label="Alfador home">
       <img
-        src={logo.url}
+        src={logo}
         alt="Alfador logo"
         width={48}
         height={48}
