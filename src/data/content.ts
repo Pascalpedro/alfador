@@ -68,6 +68,8 @@ export const solutions: Solution[] = [
     title: "Cloud Infrastructure",
     summary:
       "We provide flexible cloud environments to run, protect, and scale your business operations with confidence.",
+    ctaLabel: "Explore Cloud Solutions",
+    ctaHash: "cloud",
     capabilities: [
       "AWS / Azure / GCP landing zones",
       "Terraform, Kubernetes and GitOps",
