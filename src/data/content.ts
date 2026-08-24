@@ -248,6 +248,8 @@ export const solutions: Solution[] = [
     title: "Strategic Technology Advisory",
     summary:
       "We align your technology roadmap directly with your core business objectives to drive long-term growth.",
+    ctaLabel: "Book a Strategic Advisory Consultation",
+    ctaHash: "advisory",
     capabilities: [
       "Technology roadmap and investment planning",
       "Cost optimisation and vendor selection",
