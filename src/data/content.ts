@@ -147,6 +147,8 @@ export const solutions: Solution[] = [
     title: "Managed IT Services",
     summary:
       "We provide end-to-end IT support and proactive management so you can focus entirely on growing your business.",
+    ctaLabel: "Outsource Your IT Support",
+    ctaHash: "managed-it",
     capabilities: [
       "24/7 monitoring and service desk",
       "Patching, backup and disaster recovery",
