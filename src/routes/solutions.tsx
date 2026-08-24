@@ -11,13 +11,13 @@ export const Route = createFileRoute("/solutions")({
       {
         name: "description",
         content:
-          "Explore Alfador solutions: network solutions, cloud infrastructure, business security & compliance, managed IT services, AI & business automation, power & energy infrastructure, and strategic technology advisory.",
+          "Explore Alfador solutions: network infrastructure, cloud infrastructure, business security & compliance, managed IT services, AI & business automation, power & energy infrastructure, and strategic technology advisory.",
       },
       { property: "og:title", content: "Alfador Solutions" },
       {
         property: "og:description",
         content:
-          "Network solutions, cloud infrastructure, business security, managed IT, AI automation, power & energy, and strategic technology advisory.",
+          "Network infrastructure, cloud infrastructure, business security, managed IT, AI automation, power & energy, and strategic technology advisory.",
       },
       { property: "og:url", content: "/solutions" },
     ],
@@ -36,14 +36,14 @@ function Solutions() {
       />
 
       <Section>
-        <div className="space-y-6">
+        <div className="space-y-8">
           {solutions.map((s, i) => (
             <article
               key={s.slug}
               id={s.slug}
               className="card-hover scroll-mt-24 rounded-3xl border border-border bg-card p-7 shadow-soft md:p-10"
             >
-              <div className="grid gap-8 md:grid-cols-[0.85fr_1.15fr]">
+              <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
                 <div className="min-w-0">
                   <div className="flex items-center gap-3">
                     <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-accent text-navy">
@@ -53,19 +53,73 @@ function Solutions() {
                       0{i + 1}
                     </span>
                   </div>
-                  <h2 className="mt-5 text-2xl font-semibold leading-tight">{s.title}</h2>
-                  <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                    {s.summary}
+                  <h2 className="mt-5 text-2xl font-semibold leading-tight md:text-3xl">
+                    {s.title}
+                  </h2>
+                  {s.tagline && (
+                    <p className="mt-2 text-base font-medium text-electric">
+                      {s.tagline}
+                    </p>
+                  )}
+                  <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                    {s.description || s.summary}
                   </p>
                 </div>
-                <ul className="grid gap-3 sm:grid-cols-2 md:content-center">
-                  {s.capabilities.map((c) => (
-                    <li key={c} className="flex items-start gap-2.5 text-sm leading-relaxed">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-navy" aria-hidden />
-                      <span>{c}</span>
-                    </li>
-                  ))}
-                </ul>
+
+                <div className="space-y-6 md:content-center">
+                  {s.offerings && (
+                    <>
+                      <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+                        {s.offeringsLabel || "Core Offerings"}
+                      </h3>
+                      <div className="grid gap-6 sm:grid-cols-2">
+                        {s.offerings.map((group) => (
+                          <div key={group.title} className="space-y-3">
+                            <h4 className="font-semibold leading-snug">
+                              {group.title}
+                            </h4>
+                            {group.description && (
+                              <p className="text-sm leading-relaxed text-muted-foreground">
+                                {group.description}
+                              </p>
+                            )}
+                            <ul className="space-y-2">
+                              {group.items.map((item) => (
+                                <li
+                                  key={item}
+                                  className="flex items-start gap-2.5 text-sm leading-relaxed"
+                                >
+                                  <Check
+                                    className="mt-0.5 h-4 w-4 shrink-0 text-electric"
+                                    aria-hidden
+                                  />
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  )}
+
+                  {!s.offerings && (
+                    <ul className="grid gap-3 sm:grid-cols-2 md:content-center">
+                      {s.capabilities.map((c) => (
+                        <li
+                          key={c}
+                          className="flex items-start gap-2.5 text-sm leading-relaxed"
+                        >
+                          <Check
+                            className="mt-0.5 h-4 w-4 shrink-0 text-electric"
+                            aria-hidden
+                          />
+                          <span>{c}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
             </article>
           ))}
