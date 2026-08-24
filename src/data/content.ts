@@ -9,6 +9,7 @@ export type OfferingGroup = {
 
 export type Solution = {
   slug: string;
+  anchor: string;
   icon: LucideIcon;
   title: string;
   summary: string;
