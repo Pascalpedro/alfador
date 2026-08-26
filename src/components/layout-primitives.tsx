@@ -66,7 +66,7 @@ export function PageHero({
 }: {
   eyebrow: string;
   title: string;
-  description: string;
+  description: ReactNode;
   children?: ReactNode;
 }) {
   return (
@@ -75,9 +75,9 @@ export function PageHero({
         <div className="max-w-3xl rise-in">
           <Eyebrow>{eyebrow}</Eyebrow>
           <h1 className="mt-6 text-4xl font-semibold leading-[1.05] md:text-6xl">{title}</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          <div className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             {description}
-          </p>
+          </div>
           {children && <div className="mt-8">{children}</div>}
         </div>
       </Container>
