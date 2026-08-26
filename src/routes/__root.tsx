@@ -85,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Alfador designs and builds secure, intelligent and scalable digital infrastructure — networks, cloud, AI, automation and cybersecurity.",
       },
-      { name: "author", content: "Alfador Integrated Systems" },
+      { name: "author", content: "Alfador Technologies Ltd" },
       { property: "og:site_name", content: "Alfador" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -107,7 +107,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Alfador",
-          legalName: "Alfador Integrated Systems",
+          legalName: "Alfador Technologies Ltd",
           slogan: "Bridging Business and Technology",
           description:
             "Technology company delivering IT network infrastructure, cloud and DevOps, artificial intelligence, enterprise automation and cybersecurity.",
