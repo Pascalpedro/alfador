@@ -192,3 +192,12 @@
     transform: translateY(0);
   }
 }
+
+/* Hide Netlify promotional badges injected into published pages */
+.netlify-badge,
+.netlify-credit-badge,
+[data-netlify-credit-badge],
+.netlify-deploy-badge {
+  display: none !important;
+}
+

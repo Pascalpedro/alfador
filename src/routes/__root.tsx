@@ -85,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Alfador designs and builds secure, intelligent and scalable digital infrastructure — networks, cloud, AI, automation and cybersecurity.",
       },
-      { name: "author", content: "Alfador Technologies Ltd" },
+      { name: "author", content: "Alfador Integrated Systems" },
       { property: "og:site_name", content: "Alfador" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -107,7 +107,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Alfador",
-          legalName: "Alfador Technologies Ltd",
+          legalName: "Alfador Integrated Systems",
           slogan: "Bridging Business and Technology",
           description:
             "Technology company delivering IT network infrastructure, cloud and DevOps, artificial intelligence, enterprise automation and cybersecurity.",
@@ -138,6 +138,28 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  useEffect(() => {
+    const removeNetlifyBadge = () => {
+      document.querySelectorAll("a, div, span, img, p").forEach((el) => {
+        const text = el.textContent || "";
+        if (text.includes("Powered by Netlify") || text.includes("Deploy to Netlify")) {
+          el.remove();
+        }
+        if (
+          el.tagName === "IMG" &&
+          ((el as HTMLImageElement).alt?.toLowerCase().includes("netlify") ||
+            (el as HTMLImageElement).src?.toLowerCase().includes("netlify"))
+        ) {
+          el.remove();
+        }
+      });
+    };
+    removeNetlifyBadge();
+    const observer = new MutationObserver(removeNetlifyBadge);
+    observer.observe(document.body, { childList: true, subtree: true });
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
