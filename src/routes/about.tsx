@@ -10,7 +10,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Alfador Technologies Ltd is an engineering-led technology company helping organisations transform with secure, reliable and scalable systems.",
+          "Alfador Integrated Systems is an engineering-led technology company helping organisations transform with secure, reliable and scalable systems.",
       },
       { property: "og:title", content: "About Alfador" },
       {
@@ -85,7 +85,7 @@ function About() {
               and the incident runbook.
             </p>
             <p>
-              Alfador Technologies Ltd works with financial services, healthcare, logistics,
+              Alfador Integrated Systems works with financial services, healthcare, logistics,
               manufacturing and public sector organisations that operate under real regulatory
               scrutiny.
             </p>

@@ -1,6 +1,6 @@
 # Alfador Elevate
 
-Create a modern, responsive corporate website for Alfador Technologies Ltd, a technology company focused on IT Network Infrastructure, cloud infrastructure, AI, cybersecurity, enterprise automation, e.t.c
+Create a modern, responsive corporate website for Alfador Integrated Systems, a technology company focused on IT Network Infrastructure, cloud infrastructure, AI, cybersecurity, enterprise automation, e.t.c
 
 Brand brief:
 
@@ -12,7 +12,7 @@ Tagline: Bridging Business and Technology
 
 Brand name: Alfador
 
- Legal name: Alfador Technologies Ltd
+ Legal name: Alfador Integrated Systems
 ---
 
 The visual style should be clean, minimal, and enterprise-grade, inspired by companies like Stripe, Linear, Vercel, and Cloudflare.
@@ -28,13 +28,13 @@ I would make one small change to the name presentation throughout the site.
 
 Instead of displaying:
 
-'Alfador Technologies Ltd'
+'Alfador Integrated Systems'
 
 everywhere, use:
 
 'Alfador ' as the primary brand.
 
-Reserve Alfador Technologies Ltd for the footer, legal pages, invoices, and other formal documents.
+Reserve Alfador Integrated Systems for the footer, legal pages, invoices, and other formal documents.
 
 This project was built with [Lovable](https://lovable.dev).
 
