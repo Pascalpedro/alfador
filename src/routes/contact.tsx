@@ -6,13 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { solutions } from "@/data/content";
 
 export const Route = createFileRoute("/contact")({
@@ -52,9 +46,9 @@ function Contact() {
         description={
           <>
             <p>
-              Every business reaches a point where existing systems, processes, or technology are
-              no longer enough. Whether you're looking to modernize, secure, integrate, automate, or
-              transform, tell us where you are and where you want to go.
+              Every business reaches a point where existing systems, processes, or technology are no longer enough.
+              Whether you're looking to modernize, secure, integrate, automate, or transform, tell us where you are and
+              where you want to go.
             </p>
             <p className="mt-4">
               <strong className="font-semibold text-foreground">
@@ -70,19 +64,21 @@ function Contact() {
           <div className="rounded-3xl border border-border bg-card p-7 shadow-soft md:p-10">
             {sent ? (
               <div className="py-10 text-center" role="status">
-              <CheckCircle2 className="mx-auto h-10 w-10 text-navy" aria-hidden />
-              <h2 className="mt-5 text-2xl font-semibold">Thanks — let&apos;s take it from here.</h2>
-              <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
-                We&apos;ve received your message and will review the context you&apos;ve shared. A member of the Alfador team will get back to you within one business day to discuss your needs and the best way forward.
-              </p>
-              <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
-                For urgent enquiries, email <a className="text-foreground underline" href="mailto:alfador.info@gmail.com">alfador.info@gmail.com</a> directly.
-              </p>
-                <Button
-                  variant="outline"
-                  className="mt-7 rounded-full border-border"
-                  onClick={() => setSent(false)}
-                >
+                <CheckCircle2 className="mx-auto h-10 w-10 text-navy" aria-hidden />
+                <h2 className="mt-5 text-2xl font-semibold">Thanks... let&apos;s take it from here.</h2>
+                <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
+                  We&apos;ve received your message and will review the context you&apos;ve shared. A member of the
+                  Alfador team will get back to you within one business day to discuss your needs and the best way
+                  forward.
+                </p>
+                <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
+                  For urgent enquiries, email{" "}
+                  <a className="text-foreground underline" href="mailto:alfador.info@gmail.com">
+                    alfador.info@gmail.com
+                  </a>{" "}
+                  directly.
+                </p>
+                <Button variant="outline" className="mt-7 rounded-full border-border" onClick={() => setSent(false)}>
                   Send another message
                 </Button>
               </div>
@@ -129,9 +125,7 @@ function Contact() {
                 <Button type="submit" size="lg" className="w-full rounded-full sm:w-auto sm:px-8">
                   Send message
                 </Button>
-                <p className="text-xs text-muted-foreground">
-                  We use your details only to respond to this enquiry.
-                </p>
+                <p className="text-xs text-muted-foreground">We use your details only to respond to this enquiry.</p>
               </form>
             )}
           </div>
@@ -170,17 +164,14 @@ function Contact() {
                       {item.body}
                     </a>
                   ) : (
-                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                      {item.body}
-                    </p>
+                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
                   )}
                 </div>
               </div>
             ))}
 
             <p className="px-2 text-xs leading-relaxed text-muted-foreground">
-              Alfador Integrated Systems — registered technology company. All enquiries handled under
-              NDA on request.
+              Alfador Integrated Systems — registered technology company. All enquiries handled under NDA on request.
             </p>
           </aside>
         </div>
