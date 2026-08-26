@@ -148,7 +148,8 @@ function RootComponent() {
         }
         if (
           el.tagName === "IMG" &&
-          (el.alt?.toLowerCase().includes("netlify") || el.src?.toLowerCase().includes("netlify"))
+          ((el as HTMLImageElement).alt?.toLowerCase().includes("netlify") ||
+            (el as HTMLImageElement).src?.toLowerCase().includes("netlify"))
         ) {
           el.remove();
         }
