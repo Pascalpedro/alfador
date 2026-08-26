@@ -70,12 +70,14 @@ function Contact() {
           <div className="rounded-3xl border border-border bg-card p-7 shadow-soft md:p-10">
             {sent ? (
               <div className="py-10 text-center" role="status">
-                <CheckCircle2 className="mx-auto h-10 w-10 text-navy" aria-hidden />
-                <h2 className="mt-5 text-2xl font-semibold">Thanks — message received.</h2>
-                <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
-                  One of our engineers will reply within one business day. For anything urgent,
-                  email hello@alfador.tech directly.
-                </p>
+              <CheckCircle2 className="mx-auto h-10 w-10 text-navy" aria-hidden />
+              <h2 className="mt-5 text-2xl font-semibold">Thanks — let&apos;s take it from here.</h2>
+              <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
+                We&apos;ve received your message and will review the context you&apos;ve shared. A member of the Alfador team will get back to you within one business day to discuss your needs and the best way forward.
+              </p>
+              <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
+                For urgent enquiries, email <a className="text-foreground underline" href="mailto:alfador.info@gmail.com">alfador.info@gmail.com</a> directly.
+              </p>
                 <Button
                   variant="outline"
                   className="mt-7 rounded-full border-border"
@@ -139,8 +141,8 @@ function Contact() {
               {
                 icon: Mail,
                 title: "Email",
-                body: "hello@alfador.tech",
-                href: "mailto:hello@alfador.tech",
+                body: "alfador.info@gmail.com",
+                href: "mailto:alfador.info@gmail.com",
               },
               {
                 icon: Phone,
