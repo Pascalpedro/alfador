@@ -139,6 +139,27 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
+  useEffect(() => {
+    const removeNetlifyBadge = () => {
+      document.querySelectorAll("a, div, span, img, p").forEach((el) => {
+        const text = el.textContent || "";
+        if (text.includes("Powered by Netlify") || text.includes("Deploy to Netlify")) {
+          el.remove();
+        }
+        if (
+          el.tagName === "IMG" &&
+          (el.alt?.toLowerCase().includes("netlify") || el.src?.toLowerCase().includes("netlify"))
+        ) {
+          el.remove();
+        }
+      });
+    };
+    removeNetlifyBadge();
+    const observer = new MutationObserver(removeNetlifyBadge);
+    observer.observe(document.body, { childList: true, subtree: true });
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <a
