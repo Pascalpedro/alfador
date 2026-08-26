@@ -111,7 +111,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           slogan: "Bridging Business and Technology",
           description:
             "Technology company delivering IT network infrastructure, cloud and DevOps, artificial intelligence, enterprise automation and cybersecurity.",
-          email: "hello@alfador.tech",
+          email: "alfador.info@gmail.com",
         }),
       },
     ],
