@@ -7,9 +7,9 @@ export function Logo({ className = "" }: { className?: string }) {
       <img
         src={logo}
         alt="Alfador logo"
-        width={48}
-        height={48}
-        className="h-11 w-11 rounded-xl shadow-soft transition-transform duration-300 group-hover:scale-105 md:h-12 md:w-12"
+        width={586}
+        height={602}
+        className="h-11 w-11 transition-transform duration-300 group-hover:scale-105 md:h-12 md:w-12"
       />
       <span className="font-display text-xl font-semibold tracking-tight md:text-2xl">Alfador</span>
     </Link>

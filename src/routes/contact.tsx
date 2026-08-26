@@ -81,7 +81,7 @@ function Contact() {
                     <Input id="name" name="name" required autoComplete="name" />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email">Work email</Label>
+                    <Label htmlFor="email">Email</Label>
                     <Input id="email" name="email" type="email" required autoComplete="email" />
                   </div>
                   <div className="space-y-2">
@@ -132,8 +132,8 @@ function Contact() {
               {
                 icon: Phone,
                 title: "Phone",
-                body: "+234 800 000 0000",
-                href: "tel:+2348000000000",
+                body: "+234 803 914 5668",
+                href: "tel:+2348039145668",
               },
               { icon: MapPin, title: "Office", body: "Lagos, Nigeria — remote-first across EMEA" },
               { icon: Clock, title: "Response time", body: "Within one business day" },
@@ -164,7 +164,7 @@ function Contact() {
             ))}
 
             <p className="px-2 text-xs leading-relaxed text-muted-foreground">
-              Alfador Technologies Ltd — registered technology company. All enquiries handled under
+              Alfador Integrated Systems — registered technology company. All enquiries handled under
               NDA on request.
             </p>
           </aside>
