@@ -48,8 +48,21 @@ function Contact() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Tell us what you're trying to build."
-        description="Whether it's a network refresh, a cloud migration, an AI pilot or a security gap you already know about — start with the context and we'll take it from there."
+        title="Open the door to what's next."
+        description={
+          <>
+            <p>
+              Every business reaches a point where existing systems, processes, or technology are
+              no longer enough. Whether you're looking to modernize, secure, integrate, automate, or
+              transform, tell us where you are and where you want to go.
+            </p>
+            <p className="mt-4">
+              <strong className="font-semibold text-foreground">
+                Alfador helps bridge the gap between business ambition and technological possibility.
+              </strong>
+            </p>
+          </>
+        }
       />
 
       <Section>
