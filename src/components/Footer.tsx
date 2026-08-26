@@ -1,6 +1,21 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
 import logo from "@/assets/alfador-logo.png";
+
+export function Footer() {
+  return (
+    <footer className="mt-24 bg-ink text-primary-foreground">
+      <div className="mx-auto max-w-6xl px-5 py-16 lg:px-8">
+        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
+          <div className="min-w-0">
+            <img
+              src={logo}
+              alt="Alfador Integrated Systems — Bridging business and technology"
+              width={586}
+              height={602}
+              loading="lazy"
+              className="w-40"
+            />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-primary-foreground/70">
               Bridging the gaps between your business and technology — secure, intelligent and
               scalable digital infrastructure for modern enterprises.
