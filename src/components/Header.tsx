@@ -41,16 +41,14 @@ export function Header() {
               className="flex h-full items-center gap-2 px-3 text-xs font-medium text-white/90 transition-colors hover:text-white"
             >
               <Phone className="h-3.5 w-3.5" />
-              <span className="hidden sm:inline">{contact.phone}</span>
-              <span className="sm:hidden">Phone</span>
+              <span className="whitespace-nowrap">{contact.phone}</span>
             </a>
             <a
               href={contact.emailHref}
-              className="flex h-full items-center gap-2 px-3 text-xs font-medium text-white/90 transition-colors hover:text-white"
+              className="hidden h-full items-center gap-2 px-3 text-xs font-medium text-white/90 transition-colors hover:text-white sm:flex"
             >
               <Mail className="h-3.5 w-3.5" />
-              <span className="hidden sm:inline">{contact.email}</span>
-              <span className="sm:hidden">Email</span>
+              <span className="whitespace-nowrap">{contact.email}</span>
             </a>
           </div>
 
