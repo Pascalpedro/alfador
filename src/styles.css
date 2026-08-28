@@ -158,6 +158,14 @@
   background-image: var(--gradient-mesh);
 }
 
+@utility grid-bg {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--navy) 7%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--navy) 7%, transparent) 1px, transparent 1px);
+  background-size: 2.75rem 2.75rem;
+  mask-image: radial-gradient(ellipse at center, black 0%, transparent 75%);
+}
+
 @utility shadow-soft {
   box-shadow: var(--shadow-soft);
 }
@@ -200,4 +208,3 @@
 .netlify-deploy-badge {
   display: none !important;
 }
-
