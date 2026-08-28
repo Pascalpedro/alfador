@@ -26,8 +26,7 @@ export const solutions: Solution[] = [
     anchor: "network",
     icon: Network,
     title: "Network Infrastructure Solutions",
-    summary:
-      "We connect your offices, people, and systems into one seamless, reliable technology environment.",
+    summary: "We connect your offices, people, and systems into one seamless, reliable technology environment.",
     capabilities: [
       "Structured cabling & data centre build-out",
       "SD-WAN and multi-site connectivity",
@@ -41,7 +40,7 @@ export const solutions: Solution[] = [
       {
         title: "Data & Connectivity",
         description:
-          "Deploying robust local Area Networks (LAN), software-defined wide area networking (SD-WAN), and high-capacity wireless access points.",
+          "We deploy robust local Area Networks (LAN), software-defined wide area networking (SD-WAN), and high-capacity wireless access points.",
         items: [
           "Office networking & multi-branch connectivity",
           "Business Wi-Fi solutions & VPN deployment",
@@ -52,7 +51,7 @@ export const solutions: Solution[] = [
       {
         title: "Unified Business Voice",
         description:
-          "Structuring unified communication networks using IP-PBX controllers and VOIP systems for internal business environments.",
+          "We structure unified communication networks using IP-PBX controllers and VOIP systems for internal business environments.",
         items: [
           "Cloud & Hosted PBX / PABX systems",
           "Corporate User Groups (CUG) & SIP Trunks",
@@ -82,7 +81,7 @@ export const solutions: Solution[] = [
       {
         title: "Cloud & Hosting Services",
         description:
-          "Migrating legacy workloads and deploying scalable virtual environments to eliminate expensive physical servers and enable seamless remote operations.",
+          "We migrate legacy workloads and deploy scalable virtual environments to eliminate expensive physical servers and enable seamless remote operations.",
         items: [
           "Cloud migration, strategy, and architecture design",
           "Virtual server deployment and orchestration",
@@ -93,7 +92,7 @@ export const solutions: Solution[] = [
       {
         title: "Infrastructure Modernization",
         description:
-          "Overhauling outdated physical frameworks and integrating comprehensive data redundancy protocols to protect business operational continuity.",
+          "We overhaul outdated physical frameworks and integrate comprehensive data redundancy protocols to protect business operational continuity.",
         items: [
           "Infrastructure modernization and legacy hardware upgrades",
           "Secure automated backup frameworks",
@@ -109,7 +108,7 @@ export const solutions: Solution[] = [
     icon: ShieldCheck,
     title: "Business Security & Compliance",
     summary:
-      "We protect your assets from cyber threats, data loss, unauthorized access and physical security breaches.",
+      "We protect your assets from cyber threats, data loss, unauthorized access, and physical security breaches.",
     capabilities: [
       "Security architecture and zero-trust identity",
       "Vulnerability management and pen testing",
@@ -118,12 +117,12 @@ export const solutions: Solution[] = [
     ],
     tagline: "Multilayered Defense. Zero-Trust Access. Total Enterprise Protection.",
     description:
-      "We protect your assets from cyber threats, data loss, unauthorized access and physical security breaches with enterprise-grade security tailored to your operations.",
+      "We protect your assets from cyber threats, data loss, unauthorized access, and physical security breaches with enterprise-grade security tailored to your operations.",
     offerings: [
       {
         title: "Cybersecurity & Compliance",
         description:
-          "Protecting endpoints, local servers, and cloud resources via continuous threat detection, robust firewall management, and strict industry compliance governance.",
+          "We protect endpoints, local servers, and cloud resources via continuous threat detection, robust firewall management, and strict industry compliance governance.",
         items: [
           "Data protection advisory & regulatory compliance support (NDPA/NDPB)",
           "System security assessments & vulnerability management",
@@ -136,7 +135,7 @@ export const solutions: Solution[] = [
       {
         title: "Intelligent Physical Surveillance",
         description:
-          "Securing physical business perimeters and smart facilities with high-definition tracking hardware, active access controls, and automated alert telemetry.",
+          "We secure physical business perimeters and smart facilities with high-definition tracking hardware, active access controls, and automated alert telemetry.",
         items: [
           "Smart commercial & residential security integration",
           "High-definition smart security & 4G surveillance cameras",
@@ -161,13 +160,12 @@ export const solutions: Solution[] = [
       "Vendor management and IT roadmapping",
     ],
     tagline: "Proactive Support. Seamless Monitoring. Complete Technical Peace of Mind.",
-    description:
-      "We become your technology department, keeping your systems running while you focus on your business.",
+    description: "We become your technology department, keeping your systems running while you focus on your business.",
     offerings: [
       {
         title: "Managed IT Operations",
         description:
-          "Serving as your dedicated, fully outsourced technology department to handle day-to-day administrative tasks, user support, and third-party vendor coordination.",
+          "We serve as your dedicated, fully outsourced technology department to handle day-to-day administrative tasks, user support, and third-party vendor coordination.",
         items: [
           "Full-scale IT outsourcing & on-site technical staffing",
           "Helpdesk technical support & multi-tiered troubleshooting",
@@ -178,7 +176,7 @@ export const solutions: Solution[] = [
       {
         title: "Systems & Network Monitoring",
         description:
-          "Deploying real-time monitoring tools to actively track infrastructure performance, push security updates, and resolve bottlenecks before they disrupt operations.",
+          "We deploy real-time monitoring tools to actively track infrastructure performance, push security updates, and resolve bottlenecks before they disrupt operations.",
         items: [
           "Remote system monitoring & predictive analytics",
           "Automated patch management & software updates",
@@ -206,12 +204,12 @@ export const solutions: Solution[] = [
       "We minimize repetitive work, manual processes, and cut operational costs through custom software and AI workflows that scale with your business.",
     offerings: [
       {
-        title: "Custom Software & Applications",
+        title: "Custom Apps & Software",
         description:
-          "Engineering bespoke software platforms and dedicated digital entry points to unify your internal business systems and improve customer engagement.",
+          "We build custom websites, software, and private apps that fit your exact business needs and make it easy for your staff to work and your customers to do business with you.",
         items: [
           "Custom web applications & internal management systems",
-          "Dedicated customer and partner portal engineering",
+          "Dedicated customer and partner portal",
           "Tailored business application development & API integrations",
           "Legacy software modernization",
         ],
@@ -219,7 +217,7 @@ export const solutions: Solution[] = [
       {
         title: "Workflow & Intelligent Automation",
         description:
-          "Designing autonomous end-to-end workflow engines and AI models that handle repetitive tasks, reduce human error, and cut operational costs.",
+          "We design autonomous end-to-end workflow engines and AI models that handle repetitive tasks, reduce human error, and cut operational costs.",
         items: [
           "End-to-end business workflow automation",
           "AI-powered automation solutions & agentic processing",
@@ -261,7 +259,7 @@ export const solutions: Solution[] = [
       {
         title: "Resilient Energy Infrastructure",
         description:
-          "Designing intelligent backup and renewable energy systems that improve power reliability and reduce operational disruption.",
+          "We design intelligent backup and renewable energy systems that improve power reliability and reduce operational disruption.",
         items: [
           "Independent solar array & hybrid power network engineering",
           "High-capacity inverter and backup generator integration",
@@ -277,8 +275,7 @@ export const solutions: Solution[] = [
     anchor: "advisory",
     icon: Compass,
     title: "Strategic Technology Advisory",
-    summary:
-      "We align your technology roadmap directly with your core business objectives to drive long-term growth.",
+    summary: "We align your technology roadmap directly with your core business objectives to drive long-term growth.",
     capabilities: [
       "Technology roadmap and investment planning",
       "Cost optimisation and vendor selection",
@@ -292,7 +289,7 @@ export const solutions: Solution[] = [
       {
         title: "Strategic Planning & Roadmapping",
         description:
-          "Architecting long-term technology strategies that transform technical investments into direct drivers of commercial efficiency and digital expansion.",
+          "We architect long-term technology strategies that transform technical investments into direct drivers of commercial efficiency and digital expansion.",
         items: [
           "Long-term technology strategy design & tactical execution",
           "Legacy-to-cloud migration roadmap development",
@@ -303,7 +300,7 @@ export const solutions: Solution[] = [
       {
         title: "Governance, Compliance & Excellence",
         description:
-          "Auditing existing systems to locate operational bottlenecks while supervising procurement negotiations and project delivery to eliminate budget waste.",
+          "We audit existing systems to locate operational bottlenecks while supervising procurement negotiations and project delivery to eliminate budget waste.",
         items: [
           "IT health checks, architectural audits, & security gap assessments",
           "IT governance frameworks, risk management controls, & tech policies",
@@ -332,8 +329,7 @@ export const projects: Project[] = [
     client: "Pan-African bank",
     sector: "Financial services",
     title: "Multi-site network modernisation across 42 branches",
-    challenge:
-      "Ageing MPLS links and flat networks caused branch outages and made compliance segmentation impossible.",
+    challenge: "Ageing MPLS links and flat networks caused branch outages and made compliance segmentation impossible.",
     outcome:
       "Delivered an SD-WAN overlay with segmented VLANs, redundant links and centralised monitoring, rolled out branch by branch with zero unplanned downtime.",
     metrics: [
@@ -348,8 +344,7 @@ export const projects: Project[] = [
     client: "Insurance group",
     sector: "Insurance",
     title: "Regulated cloud landing zone and delivery pipeline",
-    challenge:
-      "Teams shipped manually into unmanaged accounts, with no consistent guardrails or audit trail.",
+    challenge: "Teams shipped manually into unmanaged accounts, with no consistent guardrails or audit trail.",
     outcome:
       "Built a Terraform landing zone with policy guardrails, environment isolation and GitOps pipelines that took releases from monthly to daily.",
     metrics: [
@@ -364,8 +359,7 @@ export const projects: Project[] = [
     client: "Health provider network",
     sector: "Healthcare",
     title: "AI assistant for claims and policy review",
-    challenge:
-      "Claims officers spent hours cross-referencing policy documents, creating a persistent backlog.",
+    challenge: "Claims officers spent hours cross-referencing policy documents, creating a persistent backlog.",
     outcome:
       "Shipped a retrieval-grounded assistant with citation-backed answers and human review gates, integrated directly into the claims workspace.",
     metrics: [
@@ -380,8 +374,7 @@ export const projects: Project[] = [
     client: "Logistics operator",
     sector: "Logistics",
     title: "Security operations uplift and 24/7 detection",
-    challenge:
-      "Alerts were scattered across tools with no ownership, and incidents were discovered by end users.",
+    challenge: "Alerts were scattered across tools with no ownership, and incidents were discovered by end users.",
     outcome:
       "Consolidated telemetry into a single SIEM, wrote detection content mapped to MITRE ATT&CK and stood up an on-call response runbook.",
     metrics: [
@@ -396,8 +389,7 @@ export const projects: Project[] = [
     client: "Manufacturing group",
     sector: "Manufacturing",
     title: "Back-office automation across procurement and finance",
-    challenge:
-      "Purchase approvals moved by email and spreadsheet, with no visibility into where a request was stuck.",
+    challenge: "Purchase approvals moved by email and spreadsheet, with no visibility into where a request was stuck.",
     outcome:
       "Automated the procure-to-pay flow with integrated approvals, ERP sync and a live audit trail for every request.",
     metrics: [
@@ -412,8 +404,7 @@ export const projects: Project[] = [
     client: "Retail chain",
     sector: "Retail",
     title: "Unified data platform for 180 stores",
-    challenge:
-      "Every region reported different numbers because each pulled from its own extract.",
+    challenge: "Every region reported different numbers because each pulled from its own extract.",
     outcome:
       "Rebuilt ingestion into a governed lakehouse with tested models and one certified metrics layer for the whole group.",
     metrics: [
@@ -465,8 +456,7 @@ export const insights: Insight[] = [
   {
     slug: "automation-that-people-actually-use",
     title: "Automation that people actually use",
-    excerpt:
-      "Process automation succeeds or fails on adoption. Design for the exception path, not the happy path.",
+    excerpt: "Process automation succeeds or fails on adoption. Design for the exception path, not the happy path.",
     category: "Automation",
     date: "2026-05-15",
     readTime: "5 min read",
@@ -474,8 +464,7 @@ export const insights: Insight[] = [
   {
     slug: "observability-budget",
     title: "Setting an observability budget before the incident",
-    excerpt:
-      "Signals cost money. A simple tiering model to keep telemetry spend proportional to service criticality.",
+    excerpt: "Signals cost money. A simple tiering model to keep telemetry spend proportional to service criticality.",
     category: "DevOps",
     date: "2026-04-28",
     readTime: "8 min read",
@@ -483,8 +472,7 @@ export const insights: Insight[] = [
   {
     slug: "network-segmentation-playbook",
     title: "A pragmatic network segmentation playbook",
-    excerpt:
-      "How to phase segmentation across a live estate without freezing the business for a maintenance window.",
+    excerpt: "How to phase segmentation across a live estate without freezing the business for a maintenance window.",
     category: "Network",
     date: "2026-04-06",
     readTime: "10 min read",
