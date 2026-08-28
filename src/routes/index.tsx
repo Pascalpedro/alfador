@@ -13,13 +13,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Alfador designs, implements and maintains intelligent IT solutions: network solutions, cloud infrastructure, business security, managed IT services, AI & automation, power & energy, and strategic technology advisory.",
+          "Alfador designs, implements and maintains intelligent IT solutions: network solutions, cloud infrastructure, business security, managed IT services, AI & automation, smart spaces & energy infrastructure, and strategic technology advisory.",
       },
       { property: "og:title", content: "Alfador — Bridging Business and Technology" },
       {
         property: "og:description",
         content:
-          "Secure, cost-effective technology for modern enterprises — networks, cloud, security, managed IT, AI automation, power and strategic advisory.",
+          "Secure, cost-effective technology for modern enterprises — networks, cloud, security, managed IT, AI automation, smart spaces & energy, and strategic advisory.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -49,7 +49,7 @@ const solutionCtas: Record<string, string> = {
   security: "Secure My Business",
   "managed-it": "Outsource Your IT Support",
   automation: "Cut Operational Costs",
-  power: "Eliminate Power Downtime",
+  "smart-spaces": "Automate & Power My Facility",
   advisory: "Book a Strategic Advisory Consultation",
 };
 

@@ -12,13 +12,13 @@ export const Route = createFileRoute("/solutions")({
       {
         name: "description",
         content:
-          "Explore Alfador solutions: network infrastructure, cloud infrastructure, business security & compliance, managed IT services, AI & business automation, power & energy infrastructure, and strategic technology advisory.",
+          "Explore Alfador solutions: network infrastructure, cloud infrastructure, business security & compliance, managed IT services, AI & business automation, smart spaces & energy infrastructure, and strategic technology advisory.",
       },
       { property: "og:title", content: "Alfador Solutions" },
       {
         property: "og:description",
         content:
-          "Network infrastructure, cloud infrastructure, business security, managed IT, AI automation, power & energy, and strategic technology advisory.",
+          "Network infrastructure, cloud infrastructure, business security, managed IT, AI automation, smart spaces & energy infrastructure, and strategic technology advisory.",
       },
       { property: "og:url", content: "/solutions" },
     ],
@@ -42,7 +42,7 @@ const ctaMap: Record<
     label: "Schedule an Efficiency Assessment",
     variant: "default",
   },
-  power: { label: "Request an Infrastructure Audit", variant: "default" },
+  "smart-spaces": { label: "Request an Infrastructure Audit", variant: "default" },
   advisory: {
     label: "Book a Strategic Roadmap Session",
     variant: "accent",
