@@ -1,10 +1,9 @@
-import { Link, createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   Briefcase,
   Check,
   Gem,
-  Lightbulb,
   Settings,
   ShieldCheck,
   Sparkles,
@@ -116,9 +115,7 @@ function About() {
               <span className="inline-flex items-center rounded-full border border-border bg-secondary px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
                 Mission
               </span>
-              <h2 className="mt-5 text-2xl font-semibold text-foreground md:text-3xl">
-                Our Mission
-              </h2>
+              <h2 className="mt-5 text-2xl font-semibold text-foreground md:text-3xl">Our Mission</h2>
               <p className="mt-3 text-lg font-medium text-navy">
                 To make technology a practical engine for business progress.
               </p>
@@ -137,9 +134,7 @@ function About() {
               <span className="inline-flex items-center rounded-full border border-border bg-secondary px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
                 Vision
               </span>
-              <h2 className="mt-5 text-2xl font-semibold text-foreground md:text-3xl">
-                Our Vision
-              </h2>
+              <h2 className="mt-5 text-2xl font-semibold text-foreground md:text-3xl">Our Vision</h2>
               <p className="mt-3 text-lg font-medium text-navy">
                 A future where every business turns technology into a competitive advantage.
               </p>
@@ -164,9 +159,7 @@ function About() {
             <span className="inline-flex items-center rounded-full border border-border bg-secondary px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
               What guides us
             </span>
-            <h2 className="mt-5 text-3xl font-semibold leading-[1.1] text-foreground md:text-4xl">
-              Core Values
-            </h2>
+            <h2 className="mt-5 text-3xl font-semibold leading-[1.1] text-foreground md:text-4xl">Core Values</h2>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
               The principles that shape how we build, advise, and partner with every client.
             </p>
@@ -241,7 +234,10 @@ function About() {
             >
               <Link to="/contact">
                 Talk to Alfador
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
+                <ArrowRight
+                  className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                  aria-hidden
+                />
               </Link>
             </Button>
           </div>
