@@ -1,14 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import {
-  ArrowRight,
-  Briefcase,
-  Check,
-  Gem,
-  Settings,
-  ShieldCheck,
-  Sparkles,
-  TrendingUp,
-} from "lucide-react";
+import { ArrowRight, Briefcase, Check, Gem, Settings, ShieldCheck, Sparkles, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout-primitives";
 
@@ -195,9 +186,9 @@ function About() {
               </h2>
               <p className="mt-6 text-base leading-relaxed text-white/70 md:text-lg">
                 Modern enterprises depend on technology to compete and grow. Yet, scaling out introduces heavy friction:
-                disconnected systems, aging infrastructure, rising security risks, and technical debt that misaligns with
-                business priorities. That is where Alfador comes in. We close the gap between your corporate objectives
-                and technical execution.
+                disconnected systems, aging infrastructure, rising security risks, and technical debt that misaligns
+                with business priorities. That is where Alfador comes in. We close the gap between your corporate
+                objectives and technical execution, and help you navigate the right path forward if you are looking to:
               </p>
             </div>
 
