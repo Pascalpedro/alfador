@@ -49,7 +49,7 @@ const solutionCtas: Record<string, string> = {
   security: "Secure My Business",
   "managed-it": "Outsource Your IT Support",
   automation: "Cut Operational Costs",
-  power: "Eliminate Power Downtime",
+  "smart-spaces": "Automate & Power My Facility",
   advisory: "Book a Strategic Advisory Consultation",
 };
 

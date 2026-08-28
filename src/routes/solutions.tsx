@@ -42,7 +42,7 @@ const ctaMap: Record<
     label: "Schedule an Efficiency Assessment",
     variant: "default",
   },
-  power: { label: "Request an Infrastructure Audit", variant: "default" },
+  "smart-spaces": { label: "Request an Infrastructure Audit", variant: "default" },
   advisory: {
     label: "Book a Strategic Roadmap Session",
     variant: "accent",

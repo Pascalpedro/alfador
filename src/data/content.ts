@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Cloud, Cpu, Network, ShieldCheck, Zap, Compass, Monitor } from "lucide-react";
+import { Cloud, Cpu, Network, ShieldCheck, Lightbulb, Compass, Monitor } from "lucide-react";
 
 export type OfferingGroup = {
   title: string;
@@ -230,26 +230,38 @@ export const solutions: Solution[] = [
     ],
   },
   {
-    slug: "power-energy-infrastructure",
-    anchor: "power",
-    icon: Zap,
-    title: "Power & Energy Infrastructure",
+    slug: "smart-spaces-energy-infrastructure",
+    anchor: "smart-spaces",
+    icon: Lightbulb,
+    title: "Smart Spaces & Energy Infrastructure",
     summary:
-      "We eliminate operational downtime caused by power instability by deploying resilient renewable energy systems.",
+      "We turn traditional facilities into automated, energy-efficient environments with resilient, downtime-free power.",
     capabilities: [
+      "Smart office and home automation",
+      "Intelligent lighting, climate and access control",
       "Solar and hybrid power design",
-      "UPS, inverter and battery systems",
-      "Site survey and load profiling",
-      "Remote monitoring and maintenance",
+      "Real-time energy monitoring",
     ],
-    tagline: "Resilient Energy. Uninterrupted Uptime. Sustainable Clean Power.",
+    tagline: "Intelligent Environments. Resilient Power. Seamless Automation.",
     description:
-      "We eliminate operational downtime caused by power instability by deploying resilient renewable energy systems and intelligent backup infrastructure.",
+      "We transform traditional facilities into automated, energy-efficient environments while eliminating operational downtime caused by power instability.",
     offerings: [
       {
-        title: "Sustainable Power Deployments",
+        title: "Smart Office & Home Automation",
         description:
-          "Designing and installing autonomous renewable energy architectures and robust hybrid backup systems to eliminate grid-instability downtime.",
+          "Transforming traditional environments into connected, responsive spaces through integrated automation and IoT technologies.",
+        items: [
+          "Connected home, office, and commercial automation",
+          "Intelligent lighting, climate control, and shading systems",
+          "Centralized voice, mobile, and automated facility control",
+          "Automated energy-saving and facility management workflows",
+          "Smart locks, intercoms, and biometric access integration",
+        ],
+      },
+      {
+        title: "Resilient Energy Infrastructure",
+        description:
+          "Designing intelligent backup and renewable energy systems that improve power reliability and reduce operational disruption.",
         items: [
           "Independent solar array & hybrid power network engineering",
           "High-capacity inverter and backup generator integration",
@@ -257,19 +269,9 @@ export const solutions: Solution[] = [
           "Smart power infrastructure & real-time energy consumption monitoring",
         ],
       },
-      {
-        title: "Infrastructure Maintenance & Technical Support",
-        description:
-          "Providing technical upkeep for critical facility hardware, local high-performance processing hardware, and server enclosures to prevent unexpected failures.",
-        items: [
-          "Proactive energy hardware servicing & component lifecycle extensions",
-          "Specialized high-performance server & GPU hardware servicing",
-          "Structured physical network hardware cabinet & enclosure setup",
-          "Facility power distribution audits & safety testing",
-        ],
-      },
     ],
   },
+
   {
     slug: "strategic-technology-advisory",
     anchor: "advisory",
