@@ -36,6 +36,7 @@ function Contact() {
   const [sent, setSent] = useState(false);
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
   const [formKey, setFormKey] = useState(0);
+  const [interest, setInterest] = useState("");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -45,7 +46,9 @@ function Contact() {
     setSubmitState("submitting");
 
     try {
-      const response = await fetch("/", {
+      // Post to the static form definition, not "/" — the SSR function owns "/"
+      // and would swallow the submission before Netlify's form handler sees it.
+      const response = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(new FormData(form) as unknown as Record<string, string>).toString(),
@@ -55,6 +58,7 @@ function Contact() {
 
       setSubmitState("idle");
       setSent(true);
+      setInterest("");
       // Remount the form so all fields (including the Select) are cleared.
       setFormKey((key) => key + 1);
     } catch {
@@ -113,6 +117,7 @@ function Contact() {
                 key={formKey}
                 name="contact"
                 method="POST"
+                action="/__forms.html"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
@@ -142,7 +147,7 @@ function Contact() {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="interest">Area of interest</Label>
-                    <Select name="area_of_interest" required>
+                    <Select value={interest} onValueChange={setInterest}>
                       <SelectTrigger id="interest">
                         <SelectValue placeholder="Select a capability" />
                       </SelectTrigger>
@@ -155,6 +160,9 @@ function Contact() {
                         <SelectItem value="other">Something else</SelectItem>
                       </SelectContent>
                     </Select>
+                    {/* Plain input so the value is always part of the POST body.
+                        Radix's hidden select can block native validation. */}
+                    <input type="hidden" name="area_of_interest" value={interest} />
                   </div>
                 </div>
 
