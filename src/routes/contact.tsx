@@ -115,6 +115,7 @@ function Contact() {
                 key={formKey}
                 name="contact"
                 method="POST"
+                action="/__forms.html"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
