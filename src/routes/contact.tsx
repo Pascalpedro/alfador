@@ -45,7 +45,9 @@ function Contact() {
     setSubmitState("submitting");
 
     try {
-      const response = await fetch("/", {
+      // Post to the static form definition, not "/" — the SSR function owns "/"
+      // and would swallow the submission before Netlify's form handler sees it.
+      const response = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(new FormData(form) as unknown as Record<string, string>).toString(),
