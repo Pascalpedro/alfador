@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { CheckCircle2, Clock, Mail, MapPin, Phone } from "lucide-react";
+import { AlertCircle, CheckCircle2, Clock, Loader2, Mail, MapPin, Phone } from "lucide-react";
 import { PageHero, Section } from "@/components/layout-primitives";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -30,13 +30,39 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
 });
 
+type SubmitState = "idle" | "submitting" | "error";
+
 function Contact() {
   const [sent, setSent] = useState(false);
+  const [submitState, setSubmitState] = useState<SubmitState>("idle");
+  const [formKey, setFormKey] = useState(0);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSent(true);
+    if (submitState === "submitting") return;
+
+    const form = event.currentTarget;
+    setSubmitState("submitting");
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form) as unknown as Record<string, string>).toString(),
+      });
+
+      if (!response.ok) throw new Error(`Submission failed: ${response.status}`);
+
+      setSubmitState("idle");
+      setSent(true);
+      // Remount the form so all fields (including the Select) are cleared.
+      setFormKey((key) => key + 1);
+    } catch {
+      setSubmitState("error");
+    }
   }
+
+  const submitting = submitState === "submitting";
 
   return (
     <>
@@ -83,13 +109,28 @@ function Contact() {
                 </Button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                key={formKey}
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
                 <h2 className="text-xl font-semibold">Send us a message</h2>
+
+                <input type="hidden" name="form-name" value="contact" />
+                <p className="hidden" aria-hidden="true">
+                  <label>
+                    Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
+                  </label>
+                </p>
 
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div className="space-y-2">
                     <Label htmlFor="name">Full name</Label>
-                    <Input id="name" name="name" required autoComplete="name" />
+                    <Input id="name" name="full_name" required autoComplete="name" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
@@ -101,7 +142,7 @@ function Contact() {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="interest">Area of interest</Label>
-                    <Select name="interest">
+                    <Select name="area_of_interest" required>
                       <SelectTrigger id="interest">
                         <SelectValue placeholder="Select a capability" />
                       </SelectTrigger>
@@ -122,8 +163,34 @@ function Contact() {
                   <Textarea id="message" name="message" rows={5} required />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full rounded-full sm:w-auto sm:px-8">
-                  Send message
+                {submitState === "error" && (
+                  <p
+                    role="alert"
+                    className="flex items-center gap-2 rounded-xl border border-destructive/30 bg-destructive/10 px-4 py-3 text-sm text-destructive"
+                  >
+                    <AlertCircle className="h-4 w-4 shrink-0" aria-hidden />
+                    Sorry, your message couldn&apos;t be sent. Please try again, or email us directly at{" "}
+                    <a className="underline" href="mailto:alfador.info@gmail.com">
+                      alfador.info@gmail.com
+                    </a>
+                    .
+                  </p>
+                )}
+
+                <Button
+                  type="submit"
+                  size="lg"
+                  disabled={submitting}
+                  className="w-full rounded-full sm:w-auto sm:px-8"
+                >
+                  {submitting ? (
+                    <>
+                      <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
+                      Sending...
+                    </>
+                  ) : (
+                    "Send message"
+                  )}
                 </Button>
                 <p className="text-xs text-muted-foreground">We use your details only to respond to this enquiry.</p>
               </form>
