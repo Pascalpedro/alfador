@@ -36,6 +36,7 @@ function Contact() {
   const [sent, setSent] = useState(false);
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
   const [formKey, setFormKey] = useState(0);
+  const [interest, setInterest] = useState("");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -57,6 +58,7 @@ function Contact() {
 
       setSubmitState("idle");
       setSent(true);
+      setInterest("");
       // Remount the form so all fields (including the Select) are cleared.
       setFormKey((key) => key + 1);
     } catch {
