@@ -147,7 +147,7 @@ function Contact() {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="interest">Area of interest</Label>
-                    <Select name="area_of_interest" required>
+                    <Select value={interest} onValueChange={setInterest}>
                       <SelectTrigger id="interest">
                         <SelectValue placeholder="Select a capability" />
                       </SelectTrigger>
@@ -160,6 +160,9 @@ function Contact() {
                         <SelectItem value="other">Something else</SelectItem>
                       </SelectContent>
                     </Select>
+                    {/* Plain input so the value is always part of the POST body.
+                        Radix's hidden select can block native validation. */}
+                    <input type="hidden" name="area_of_interest" value={interest} />
                   </div>
                 </div>
 
