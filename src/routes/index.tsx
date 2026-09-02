@@ -62,12 +62,11 @@ function Home() {
         <Container className="py-16 text-center md:py-24">
           <div className="rise-in mx-auto max-w-3xl">
             <h1 className="text-4xl font-semibold leading-[1.05] md:text-6xl">
-              Bridging the gaps between your business and{" "}
-              <span className="text-electric">technology</span>
+              Bridging the gaps between your business and <span className="text-electric">technology</span>
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              Alfador designs, implements, and maintains intelligent IT solutions to make your
-              business secure, efficient, and profitable.
+              Alfador designs, implements, and maintains intelligent IT solutions to make your business secure,
+              efficient, and profitable.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Button
@@ -93,7 +92,7 @@ function Home() {
                 </span>
                 <span className="text-sm font-semibold">5.0</span>
               </div>
-              <p className="text-xs text-muted-foreground">from 40+ enterprise deployments</p>
+              <p className="text-xs text-muted-foreground">from 100+ enterprise deployments</p>
             </div>
           </div>
 
@@ -110,25 +109,19 @@ function Home() {
               />
             </div>
             <div className="rounded-3xl bg-ink p-7 text-primary-foreground">
-              <span className="font-display text-4xl font-semibold">99.98%</span>
-              <p className="mt-3 text-sm leading-snug text-primary-foreground/70">
-                Average uptime delivered across managed estates
-              </p>
+              <span className="font-display text-4xl font-semibold">99.9%</span>
+              <p className="mt-3 text-sm leading-snug text-primary-foreground/70">Customers Satisfaction</p>
             </div>
             <div className="rounded-3xl border border-border bg-card p-7 shadow-soft">
               <span className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
                 Deployments
               </span>
               <p className="mt-4 font-display text-4xl font-semibold">40+</p>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Enterprise programmes shipped across EMEA
-              </p>
+              <p className="mt-2 text-sm text-muted-foreground">Enterprise programmes shipped across EMEA</p>
             </div>
             <div className="rounded-3xl bg-accent p-7">
-              <span className="font-display text-4xl font-semibold">6+</span>
-              <p className="mt-3 text-sm leading-snug text-navy/70">
-                Years of dedicated infrastructure engineering
-              </p>
+              <span className="font-display text-4xl font-semibold">10+</span>
+              <p className="mt-3 text-sm leading-snug text-navy/70">Years of dedicated infrastructure engineering</p>
             </div>
             <div className="rounded-3xl bg-ink p-7 text-primary-foreground">
               <span className="grid h-10 w-10 place-items-center rounded-full bg-electric">
@@ -151,9 +144,8 @@ function Home() {
             </h2>
             <p className="mt-5 text-base leading-relaxed text-primary-foreground/70 md:text-lg">
               In modern business, technology is entirely interconnected.
-              <br className="hidden sm:block" /> An infrastructure choice is a security choice, an
-              automation plan is a productivity plan, and our integrated solutions are a
-              cost-reduction plan.
+              <br className="hidden sm:block" /> An infrastructure choice is a security choice, an automation plan is a
+              productivity plan, and our integrated solutions are a cost-reduction plan.
             </p>
           </div>
 
@@ -164,9 +156,7 @@ function Home() {
                 className="flex flex-col rounded-2xl border border-primary-foreground/10 bg-primary-foreground/[0.02] p-6 backdrop-blur-sm transition-colors hover:border-electric/40 sm:p-7"
               >
                 <h3 className="text-lg font-semibold leading-tight">{s.title}</h3>
-                <p className="mt-2.5 flex-1 text-sm leading-relaxed text-primary-foreground/65">
-                  {s.summary}
-                </p>
+                <p className="mt-2.5 flex-1 text-sm leading-relaxed text-primary-foreground/65">{s.summary}</p>
                 <Button
                   asChild
                   size="sm"
@@ -185,9 +175,7 @@ function Home() {
             <div className="mt-4 rounded-3xl border border-primary-foreground/10 bg-gradient-to-r from-electric/10 to-transparent p-7 sm:p-10">
               <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                 <div className="max-w-2xl">
-                  <h3 className="text-xl font-semibold leading-tight md:text-2xl">
-                    {advisory.title}
-                  </h3>
+                  <h3 className="text-xl font-semibold leading-tight md:text-2xl">{advisory.title}</h3>
                   <p className="mt-2.5 text-sm leading-relaxed text-primary-foreground/65 md:text-base">
                     {advisory.summary}
                   </p>
@@ -235,12 +223,10 @@ function Home() {
       <Section className="bg-background">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="min-w-0">
-            <h2 className="text-3xl font-semibold leading-[1.15] md:text-4xl">
-              Notes from the build
-            </h2>
+            <h2 className="text-3xl font-semibold leading-[1.15] md:text-4xl">Notes from the build</h2>
             <p className="mt-4 text-muted-foreground">
-              Field notes on zero trust, cloud guardrails, applied AI and the unglamorous work that
-              keeps enterprise platforms standing up.
+              Field notes on zero trust, cloud guardrails, applied AI and the unglamorous work that keeps enterprise
+              platforms standing up.
             </p>
             <Button
               asChild
