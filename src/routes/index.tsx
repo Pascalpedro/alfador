@@ -30,16 +30,16 @@ export const Route = createFileRoute("/")({
 
 const benefits = [
   {
-    title: "Security by default",
-    body: "Threat modelling, least privilege and auditability are part of the first design review — never a later phase.",
+    title: "Save Time",
+    body: "Automate and simplify the work that slows your business down.",
   },
   {
-    title: "Engineering excellence",
-    body: "Infrastructure as code, tested pipelines and documented handover. What we build, your team can run.",
+    title: "Reduce Costs",
+    body: "Optimize infrastructure and eliminate unnecessary costs.",
   },
   {
-    title: "Built to scale",
-    body: "Architectures that hold up when the traffic, the headcount and the regulatory scope all triple.",
+    title: "Improve Quality",
+    body: "Build systems that are more reliable, secure, and consistent.",
   },
 ];
 
@@ -199,11 +199,9 @@ function Home() {
       {/* Benefits — light */}
       <Section className="bg-background">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-semibold leading-[1.15] md:text-4xl">
-            Key benefits of our engineering standard
-          </h2>
+          <h2 className="text-3xl font-semibold leading-[1.15] md:text-4xl">What our engineering delivers</h2>
           <p className="mt-4 text-muted-foreground">
-            Outcomes, not deliverables — infrastructure your team can audit, run and grow into.
+            Our engineering decisions are ultimately judged by one question: does this make the business better?
           </p>
         </div>
         <ul className="mt-12 grid gap-6 md:grid-cols-3">
