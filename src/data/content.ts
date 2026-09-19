@@ -138,7 +138,7 @@ export const solutions: Solution[] = [
           "We secure physical business perimeters and smart facilities with high-definition tracking hardware, active access controls, and automated alert telemetry.",
         items: [
           "Smart commercial & residential security integration",
-          "High-definition smart security & 4G surveillance cameras",
+          "High-definition smart security & 4G surveillance CCTV cameras",
           "Intelligent real-time security alert & alarm systems",
           "Connected smart doorbell cameras & intercom integrations",
           "Biometric, card, and proximity Access Control systems",
@@ -190,7 +190,7 @@ export const solutions: Solution[] = [
     slug: "ai-business-automation",
     anchor: "automation",
     icon: Cpu,
-    title: "AI & Business Automation",
+    title: "Software & AI Automation",
     summary:
       "We minimize repetitive work, manual processes, and cut operational costs through custom software and AI workflows.",
     capabilities: [
