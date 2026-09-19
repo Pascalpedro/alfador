@@ -25,7 +25,7 @@ export const solutions: Solution[] = [
     slug: "network-infrastructure-solutions",
     anchor: "network",
     icon: Network,
-    title: "Network Infrastructure Solutions",
+    title: "On-Prem Network Infrastructure",
     summary: "We connect your offices, people, and systems into one seamless, reliable technology environment.",
     capabilities: [
       "Structured cabling & data centre build-out",
