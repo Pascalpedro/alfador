@@ -19,15 +19,12 @@ export function Footer() {
               />
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-primary-foreground/70">
-              Bridging the gaps between your business and technology — secure, intelligent and
-              scalable digital infrastructure for modern enterprises.
+              Bridging the gaps between your business and technology.
             </p>
           </div>
 
           <nav aria-label="Footer">
-            <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground/50">
-              Company
-            </h2>
+            <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground/50">Company</h2>
             <ul className="mt-4 space-y-2.5 text-sm">
               {[
                 { to: "/about", label: "About" },
