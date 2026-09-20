@@ -69,15 +69,15 @@ const solutionCtas: Record<string, string> = {
 };
 
 const industries: { title: string; icon: LucideIcon }[] = [
-  { title: "Banking & Financial", icon: CreditCard },
-  { title: "Healthcare", icon: HeartPulse },
   { title: "Manufacturing", icon: Factory },
+  { title: "Healthcare", icon: HeartPulse },
   { title: "Education", icon: GraduationCap },
   { title: "Retail & E-commerce", icon: ShoppingBag },
-  { title: "Logistics & Supply", icon: Truck },
-  { title: "Government & PSU", icon: Landmark },
-  { title: "Enterprise SaaS", icon: Database },
+  { title: "Banking & Financial", icon: CreditCard },
   { title: "Hospitality & Real Estate", icon: Hotel },
+  { title: "Logistics & Supply", icon: Truck },
+  { title: "Government PSU", icon: Landmark },
+  { title: "Enterprise SaaS", icon: Database },
   { title: "Commercial Agriculture & Agri-Tech", icon: Tractor },
 ];
 
@@ -251,7 +251,7 @@ function Home() {
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-semibold leading-[1.15] md:text-4xl">Industries We Serve</h2>
             <p className="mt-4 text-sm text-primary-foreground/60 md:text-base">
-              Robust engineering deployed across high-availability sectors.
+              Engineered for businesses that can never afford to go down.
             </p>
           </div>
           <ul className="mt-12 grid grid-cols-2 gap-3 md:gap-4 pb-4 lg:grid-cols-5">
