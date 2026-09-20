@@ -1,5 +1,20 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Check, Star } from "lucide-react";
+import {
+  ArrowRight,
+  Check,
+  CreditCard,
+  Database,
+  Factory,
+  GraduationCap,
+  HeartPulse,
+  Hotel,
+  Landmark,
+  ShoppingBag,
+  Star,
+  Tractor,
+  Truck,
+  type LucideIcon,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container, Section } from "@/components/layout-primitives";
 import { CTABand } from "@/components/CTABand";
