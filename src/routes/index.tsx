@@ -18,7 +18,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Container, Section } from "@/components/layout-primitives";
 import { CTABand } from "@/components/CTABand";
-import { solutions, insights } from "@/data/content";
+import { solutions } from "@/data/content";
 import heroImage from "@/assets/hero-network.jpg";
 
 export const Route = createFileRoute("/")({
