@@ -8,14 +8,14 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-5 py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div className="min-w-0">
-            <div className="overflow-hidden rounded-2xl border border-primary-foreground/10">
+            <div className="flex aspect-square w-40 items-center justify-center rounded-2xl border border-primary-foreground/10 p-6 md:w-44">
               <img
                 src={lockup}
                 alt="Alfador Integrated Systems — Bridging business and technology"
                 width={627}
                 height={406}
                 loading="lazy"
-                className="w-full max-w-xs"
+                className="h-auto w-auto max-h-full max-w-full object-contain"
               />
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-primary-foreground/70">
