@@ -5,11 +5,11 @@ import { Logo } from "./Logo";
 import { Button } from "@/components/ui/button";
 
 const nav = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/solutions", label: "Solutions" },
-  { to: "/projects", label: "Projects" },
-  { to: "/insights", label: "Insights" },
+  { to: "/", label: "Home", disabled: false },
+  { to: "/about", label: "About", disabled: false },
+  { to: "/solutions", label: "Solutions", disabled: false },
+  { to: "/projects", label: "Projects", disabled: true },
+  { to: "/insights", label: "Insights", disabled: true },
 ] as const;
 
 const contact = {
@@ -75,18 +75,28 @@ export function Header() {
 
           <div className="flex items-center gap-1">
             <nav aria-label="Main" className="hidden items-center gap-1 md:flex">
-              {nav.map((item) => (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  activeOptions={{ exact: item.to === "/" }}
-                  activeProps={{ className: "text-foreground bg-secondary" }}
-                  inactiveProps={{ className: "text-muted-foreground" }}
-                  className="rounded-full px-3.5 py-2 text-sm font-medium transition-colors hover:text-foreground"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {nav.map((item) =>
+                item.disabled ? (
+                  <span
+                    key={item.to}
+                    aria-disabled="true"
+                    className="cursor-not-allowed select-none rounded-full px-3.5 py-2 text-sm font-medium text-muted-foreground/60"
+                  >
+                    {item.label}
+                  </span>
+                ) : (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    activeOptions={{ exact: item.to === "/" }}
+                    activeProps={{ className: "text-foreground bg-secondary" }}
+                    inactiveProps={{ className: "text-muted-foreground" }}
+                    className="rounded-full px-3.5 py-2 text-sm font-medium transition-colors hover:text-foreground"
+                  >
+                    {item.label}
+                  </Link>
+                ),
+              )}
             </nav>
 
             <Button asChild size="sm" className="ml-2 hidden rounded-full px-5 md:inline-flex">
@@ -108,18 +118,27 @@ export function Header() {
         {open && (
           <nav aria-label="Mobile" className="border-t border-border bg-background px-5 py-3 md:hidden">
             <ul className="flex flex-col">
-              {[...nav, { to: "/contact", label: "Contact" } as const].map((item) => (
+              {[...nav, { to: "/contact", label: "Contact", disabled: false } as const].map((item) => (
                 <li key={item.to}>
-                  <Link
-                    to={item.to}
-                    onClick={() => setOpen(false)}
-                    activeOptions={{ exact: item.to === "/" }}
-                    activeProps={{ className: "text-foreground" }}
-                    inactiveProps={{ className: "text-muted-foreground" }}
-                    className="block rounded-lg px-2 py-3 text-base font-medium"
-                  >
-                    {item.label}
-                  </Link>
+                  {item.disabled ? (
+                    <span
+                      aria-disabled="true"
+                      className="block cursor-not-allowed select-none rounded-lg px-2 py-3 text-base font-medium text-muted-foreground/60"
+                    >
+                      {item.label}
+                    </span>
+                  ) : (
+                    <Link
+                      to={item.to}
+                      onClick={() => setOpen(false)}
+                      activeOptions={{ exact: item.to === "/" }}
+                      activeProps={{ className: "text-foreground" }}
+                      inactiveProps={{ className: "text-muted-foreground" }}
+                      className="block rounded-lg px-2 py-3 text-base font-medium"
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
