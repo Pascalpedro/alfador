@@ -232,44 +232,34 @@ function Home() {
         </ul>
       </Section>
 
-      {/* Insights — light */}
-      <Section className="bg-background">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div className="min-w-0">
-            <h2 className="text-3xl font-semibold leading-[1.15] md:text-4xl">Notes from the build</h2>
-            <p className="mt-4 text-muted-foreground">
-              Field notes on zero trust, cloud guardrails, applied AI and the unglamorous work that keeps enterprise
-              platforms standing up.
+      {/* Industries — dark, flows into CTA band */}
+      <div className="bg-ink text-primary-foreground">
+        <Container className="pt-20 md:pt-28">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-semibold leading-[1.15] md:text-4xl">Industries We Serve</h2>
+            <p className="mt-4 text-sm text-primary-foreground/60 md:text-base">
+              Robust engineering deployed across high-availability sectors.
             </p>
-            <Button
-              asChild
-              className="mt-7 rounded-full bg-electric px-7 text-electric-foreground hover:bg-electric/90"
-            >
-              <Link to="/insights">Read insights</Link>
-            </Button>
           </div>
-          <ul className="divide-y divide-border rounded-3xl border border-border bg-surface p-2">
-            {insights.slice(0, 4).map((post) => (
-              <li key={post.slug}>
-                <Link
-                  to="/insights"
-                  className="group grid gap-1 rounded-2xl p-5 transition-colors hover:bg-card sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center sm:gap-6"
-                >
-                  <div className="min-w-0">
-                    <span className="text-xs font-semibold uppercase tracking-[0.16em] text-electric">
-                      {post.category}
-                    </span>
-                    <h3 className="mt-1.5 text-base font-semibold leading-snug">{post.title}</h3>
-                  </div>
-                  <span className="shrink-0 text-xs text-muted-foreground">{post.readTime}</span>
-                </Link>
+          <ul className="mt-12 grid grid-cols-2 gap-3 md:gap-4 pb-4 lg:grid-cols-5">
+            {industries.map((industry) => (
+              <li
+                key={industry.title}
+                className="flex flex-col items-center rounded-2xl border border-primary-foreground/10 bg-primary-foreground/[0.02] px-4 py-8 text-center"
+              >
+                <span className="grid h-12 w-12 place-items-center rounded-full border border-electric/40 text-electric">
+                  <industry.icon className="h-5 w-5" aria-hidden />
+                </span>
+                <h3 className="mt-4 text-sm font-semibold leading-snug">{industry.title}</h3>
               </li>
             ))}
           </ul>
-        </div>
-      </Section>
+        </Container>
+      </div>
 
-      <CTABand />
+      <div className="bg-ink">
+        <CTABand />
+      </div>
     </>
   );
 }
