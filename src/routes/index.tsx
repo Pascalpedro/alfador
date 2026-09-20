@@ -68,6 +68,19 @@ const solutionCtas: Record<string, string> = {
   advisory: "Book a Strategic Advisory Consultation",
 };
 
+const industries: { title: string; icon: LucideIcon }[] = [
+  { title: "Banking & Financial", icon: CreditCard },
+  { title: "Healthcare", icon: HeartPulse },
+  { title: "Manufacturing", icon: Factory },
+  { title: "Education", icon: GraduationCap },
+  { title: "Retail & E-commerce", icon: ShoppingBag },
+  { title: "Logistics & Supply", icon: Truck },
+  { title: "Government & PSU", icon: Landmark },
+  { title: "Enterprise SaaS", icon: Database },
+  { title: "Hospitality & Real Estate", icon: Hotel },
+  { title: "Commercial Agriculture & Agri-Tech", icon: Tractor },
+];
+
 function Home() {
   const advisory = solutions[6];
   return (
