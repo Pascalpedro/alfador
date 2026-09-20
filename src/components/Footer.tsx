@@ -25,19 +25,28 @@ export function Footer() {
             <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground/50">Company</h2>
             <ul className="mt-4 space-y-2.5 text-sm">
               {[
-                { to: "/about", label: "About" },
-                { to: "/solutions", label: "Solutions" },
-                { to: "/projects", label: "Projects" },
-                { to: "/insights", label: "Insights" },
-                { to: "/contact", label: "Contact" },
+                { to: "/about", label: "About", disabled: false },
+                { to: "/solutions", label: "Solutions", disabled: false },
+                { to: "/projects", label: "Projects", disabled: true },
+                { to: "/insights", label: "Insights", disabled: true },
+                { to: "/contact", label: "Contact", disabled: false },
               ].map((l) => (
                 <li key={l.to}>
-                  <Link
-                    to={l.to}
-                    className="text-primary-foreground/70 transition-colors hover:text-primary-foreground"
-                  >
-                    {l.label}
-                  </Link>
+                  {l.disabled ? (
+                    <span
+                      aria-disabled="true"
+                      className="cursor-not-allowed select-none text-primary-foreground/40"
+                    >
+                      {l.label}
+                    </span>
+                  ) : (
+                    <Link
+                      to={l.to}
+                      className="text-primary-foreground/70 transition-colors hover:text-primary-foreground"
+                    >
+                      {l.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
