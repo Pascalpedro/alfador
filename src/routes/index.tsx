@@ -128,6 +128,22 @@ function Home() {
         </Container>
       </div>
 
+      {/* Why choose Alfador — clean white divider between hero and services */}
+      <div className="bg-white">
+        <Container className="py-20 md:py-24">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="text-xs font-bold font-display uppercase tracking-[0.22em] text-electric">
+              Why Choose Alfador
+            </span>
+            <p className="mt-6 text-2xl font-semibold leading-snug text-navy md:text-3xl">
+              “We are the gateway through which your business passes to become secure, efficient,
+              and dominant in its space (The Door to Alpha). Alfador provides the engineering and
+              technology solutions that make that transition seamless”
+            </p>
+          </div>
+        </Container>
+      </div>
+
       {/* Services — dark */}
       <div className="bg-ink text-primary-foreground">
         <Container className="py-20 md:py-28">
