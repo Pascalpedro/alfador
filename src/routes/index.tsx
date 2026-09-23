@@ -19,7 +19,6 @@ import { Button } from "@/components/ui/button";
 import { Container, Section } from "@/components/layout-primitives";
 import { CTABand } from "@/components/CTABand";
 import { solutions } from "@/data/content";
-import heroImage from "@/assets/hero-network.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -124,42 +123,6 @@ function Home() {
             </div>
           </div>
 
-          {/* Bento stat row */}
-          <div className="mt-14 grid gap-4 text-left sm:grid-cols-2 lg:grid-cols-5">
-            <div className="overflow-hidden rounded-3xl border border-border">
-              <img
-                src={heroImage}
-                alt="Isometric visualisation of a connected enterprise network"
-                width={640}
-                height={800}
-                loading="lazy"
-                className="h-52 w-full object-cover lg:h-full"
-              />
-            </div>
-            <div className="rounded-3xl bg-ink p-7 text-primary-foreground">
-              <span className="font-display text-4xl font-semibold">99.9%</span>
-              <p className="mt-3 text-sm leading-snug text-primary-foreground/70">Customers Satisfaction</p>
-            </div>
-            <div className="rounded-3xl border border-border bg-card p-7 shadow-soft">
-              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
-                Deployments
-              </span>
-              <p className="mt-4 font-display text-4xl font-semibold">40+</p>
-              <p className="mt-2 text-sm text-muted-foreground">Enterprise programmes shipped across EMEA</p>
-            </div>
-            <div className="rounded-3xl bg-accent p-7">
-              <span className="font-display text-4xl font-semibold">10+</span>
-              <p className="mt-3 text-sm leading-snug text-navy/70">Years of dedicated infrastructure engineering</p>
-            </div>
-            <div className="rounded-3xl bg-ink p-7 text-primary-foreground">
-              <span className="grid h-10 w-10 place-items-center rounded-full bg-electric">
-                <Check className="h-5 w-5 text-electric-foreground" aria-hidden />
-              </span>
-              <p className="mt-4 text-sm leading-snug text-primary-foreground/80">
-                24/7 monitoring and response, with runbooks your team owns.
-              </p>
-            </div>
-          </div>
         </Container>
       </div>
 
