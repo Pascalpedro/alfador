@@ -9,8 +9,8 @@ import {
   HeartPulse,
   Hotel,
   Landmark,
-  Radio,
   ShoppingBag,
+  Star,
   Tractor,
   Truck,
   type LucideIcon,
@@ -36,8 +36,6 @@ export const Route = createFileRoute("/")({
         content:
           "Secure, cost-effective technology for modern enterprises — networks, cloud, security, managed IT, AI automation, smart spaces & energy, and strategic advisory.",
       },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -88,60 +86,78 @@ function Home() {
   return (
     <>
       {/* Hero */}
-      <div className="hero-grid-bg relative overflow-hidden bg-ink text-primary-foreground">
-        <Container className="relative pb-14 pt-28 sm:pb-16 sm:pt-28 lg:py-24">
-          <div className="grid items-center gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
-            <div className="rise-in max-w-3xl">
-              <p className="flex items-center gap-2 text-xs font-semibold uppercase text-electric">
-                <Radio className="h-4 w-4" aria-hidden />
-                Integrated technology infrastructure
-              </p>
-              <h1 className="mt-5 text-4xl font-semibold leading-[1.04] sm:text-5xl lg:text-6xl">
-                Bridging the gaps between your <span className="text-electric">business</span> and{" "}
-                <span className="text-electric">technology</span>
-              </h1>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/70 sm:text-lg">
-                Alfador designs, implements, and maintains intelligent IT solutions to make your business secure,
-                efficient, and profitable.
-              </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Button
-                  asChild
-                  size="lg"
-                  className="w-full rounded-full bg-electric px-7 text-electric-foreground shadow-electric hover:bg-electric/90 sm:w-auto"
-                >
-                  <Link to="/contact">
-                    Contact us
-                    <ArrowRight className="ml-1.5 h-4 w-4" aria-hidden />
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="w-full rounded-full border-primary-foreground/30 bg-transparent px-7 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground sm:w-auto"
-                >
-                  <Link to="/solutions">Explore solutions</Link>
-                </Button>
-              </div>
-              <div className="mt-9 flex items-center gap-3 border-t border-primary-foreground/15 pt-5 text-sm text-primary-foreground/75">
-                <span className="live-node" aria-hidden />
-                <span><strong className="font-semibold text-primary-foreground">5.0</strong> from 100+ enterprise deployments</span>
-              </div>
+      <div className="bg-surface">
+        <Container className="py-16 text-center md:py-24">
+          <div className="rise-in mx-auto max-w-3xl">
+            <h1 className="text-4xl font-semibold leading-[1.05] md:text-6xl">
+              Bridging the gaps between your business and <span className="text-electric">technology</span>
+            </h1>
+            <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+              Alfador designs, implements, and maintains intelligent IT solutions to make your business secure,
+              efficient, and profitable.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <Button
+                asChild
+                size="lg"
+                className="rounded-full bg-electric px-7 text-electric-foreground hover:bg-electric/90"
+              >
+                <Link to="/contact">
+                  Contact us
+                  <ArrowRight className="ml-1.5 h-4 w-4" aria-hidden />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="rounded-full px-7">
+                <Link to="/solutions">Explore solutions</Link>
+              </Button>
             </div>
-
-            <div className="hero-visual relative mx-auto w-full max-w-xl lg:mx-0">
-              <div className="hero-glow" aria-hidden />
-              <div className="relative overflow-hidden rounded-3xl border border-primary-foreground/15 bg-primary-foreground/[0.04] p-2 shadow-lift backdrop-blur-sm sm:p-3">
-                <img
-                  src={heroImage}
-                  alt="Isometric 3D visualization of a connected enterprise server network stack"
-                  width={640}
-                  height={800}
-                  fetchPriority="high"
-                  className="aspect-[4/5] w-full rounded-2xl object-cover"
-                />
+            <div className="mt-8 flex flex-col items-center gap-1">
+              <div className="flex items-center gap-1.5">
+                <span className="flex" aria-hidden>
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-electric text-electric" />
+                  ))}
+                </span>
+                <span className="text-sm font-semibold">5.0</span>
               </div>
+              <p className="text-xs text-muted-foreground">from 100+ enterprise deployments</p>
+            </div>
+          </div>
+
+          {/* Bento stat row */}
+          <div className="mt-14 grid gap-4 text-left sm:grid-cols-2 lg:grid-cols-5">
+            <div className="overflow-hidden rounded-3xl border border-border">
+              <img
+                src={heroImage}
+                alt="Isometric visualisation of a connected enterprise network"
+                width={640}
+                height={800}
+                loading="lazy"
+                className="h-52 w-full object-cover lg:h-full"
+              />
+            </div>
+            <div className="rounded-3xl bg-ink p-7 text-primary-foreground">
+              <span className="font-display text-4xl font-semibold">99.9%</span>
+              <p className="mt-3 text-sm leading-snug text-primary-foreground/70">Customers Satisfaction</p>
+            </div>
+            <div className="rounded-3xl border border-border bg-card p-7 shadow-soft">
+              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+                Deployments
+              </span>
+              <p className="mt-4 font-display text-4xl font-semibold">40+</p>
+              <p className="mt-2 text-sm text-muted-foreground">Enterprise programmes shipped across EMEA</p>
+            </div>
+            <div className="rounded-3xl bg-accent p-7">
+              <span className="font-display text-4xl font-semibold">10+</span>
+              <p className="mt-3 text-sm leading-snug text-navy/70">Years of dedicated infrastructure engineering</p>
+            </div>
+            <div className="rounded-3xl bg-ink p-7 text-primary-foreground">
+              <span className="grid h-10 w-10 place-items-center rounded-full bg-electric">
+                <Check className="h-5 w-5 text-electric-foreground" aria-hidden />
+              </span>
+              <p className="mt-4 text-sm leading-snug text-primary-foreground/80">
+                24/7 monitoring and response, with runbooks your team owns.
+              </p>
             </div>
           </div>
         </Container>
