@@ -10,11 +10,11 @@ import {
   Hotel,
   Landmark,
   ShoppingBag,
-  Star,
   Tractor,
   Truck,
   type LucideIcon,
 } from "lucide-react";
+import heroImage from "@/assets/hero-servers.jpg";
 import { Button } from "@/components/ui/button";
 import { Container, Section } from "@/components/layout-primitives";
 import { CTABand } from "@/components/CTABand";
