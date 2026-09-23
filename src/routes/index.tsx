@@ -123,10 +123,9 @@ function Home() {
         <Container className="py-20 md:py-28">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-semibold leading-[1.15] text-navy md:text-4xl">Why Choose Alfador?</h2>
-            <p className="mt-10 text-base leading-relaxed text-muted-foreground md:mt-14 md:text-lg">
-              “We are the gateway through which your business passes to become secure, efficient, and dominant in its
-              space (The Door to Alpha). Alfador provides the engineering and technology solutions that make that
-              transition seamless”
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground md:mt-8 md:text-lg">
+              We bridge the gap between where your business operations stand today and where technology can take
+              them. We provide integrated technology solutions that make these transitions seamless.
             </p>
           </div>
         </Container>
