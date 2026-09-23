@@ -89,7 +89,7 @@ function Home() {
     <>
       {/* Hero */}
       <div className="hero-grid-bg relative overflow-hidden bg-ink text-primary-foreground">
-        <Container className="relative py-14 sm:py-16 lg:py-24">
+        <Container className="relative pb-14 pt-28 sm:pb-16 sm:pt-28 lg:py-24">
           <div className="grid items-center gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
             <div className="rise-in max-w-3xl">
               <p className="flex items-center gap-2 text-xs font-semibold uppercase text-electric">
