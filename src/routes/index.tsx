@@ -86,24 +86,18 @@ function Home() {
     <>
       {/* Hero — full-bleed background image, left-aligned content */}
       <div className="relative isolate overflow-hidden bg-ink">
-        <img
-          src={heroImage}
-          alt=""
-          aria-hidden
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+        <img src={heroImage} alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover" />
         {/* Readability overlays: dark navy grading from the left, fading over the image */}
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/30 md:via-ink/70 md:to-ink/10" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-ink/30" />
         <Container className="relative py-20 md:py-32 lg:py-40">
           <div className="rise-in max-w-xl md:max-w-2xl">
             <h1 className="text-4xl font-semibold leading-[1.05] text-white md:text-6xl">
-              Bridging the gaps between your business and{" "}
-              <span className="text-electric">technology</span>
+              Bridging the gaps between your business and <span className="text-electric">technology</span>
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75 md:text-lg">
-              Alfador designs, implements, and maintains intelligent IT solutions to make your business
-              secure, efficient, and profitable.
+              Alfador designs, implements, and maintains intelligent IT solutions to make your business secure,
+              efficient, and profitable.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button
@@ -116,11 +110,7 @@ function Home() {
                   <ArrowRight className="ml-1.5 h-4 w-4" aria-hidden />
                 </Link>
               </Button>
-              <Button
-                asChild
-                size="lg"
-                className="rounded-lg bg-white px-7 text-navy hover:bg-white/90"
-              >
+              <Button asChild size="lg" className="rounded-lg bg-white px-7 text-navy hover:bg-white/90">
                 <Link to="/solutions">Explore solutions</Link>
               </Button>
             </div>
@@ -132,13 +122,11 @@ function Home() {
       <div className="bg-white">
         <Container className="py-20 md:py-28">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-semibold leading-[1.15] text-navy md:text-4xl">
-              WHY CHOOSE ALFADOR?
-            </h2>
+            <h2 className="text-3xl font-semibold leading-[1.15] text-navy md:text-4xl">Why Choose Alfador?</h2>
             <p className="mt-10 text-base leading-relaxed text-muted-foreground md:mt-14 md:text-lg">
-              “We are the gateway through which your business passes to become secure, efficient,
-              and dominant in its space (The Door to Alpha). Alfador provides the engineering and
-              technology solutions that make that transition seamless”
+              “We are the gateway through which your business passes to become secure, efficient, and dominant in its
+              space (The Door to Alpha). Alfador provides the engineering and technology solutions that make that
+              transition seamless”
             </p>
           </div>
         </Container>
