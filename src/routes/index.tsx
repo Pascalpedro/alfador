@@ -19,6 +19,7 @@ import { Button } from "@/components/ui/button";
 import { Container, Section } from "@/components/layout-primitives";
 import { CTABand } from "@/components/CTABand";
 import { solutions } from "@/data/content";
+import heroImage from "@/assets/alfador-hero.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -84,45 +85,86 @@ function Home() {
   const advisory = solutions[6];
   return (
     <>
-      {/* Hero */}
-      <div className="bg-surface">
-        <Container className="py-16 text-center md:py-24">
-          <div className="rise-in mx-auto max-w-3xl">
-            <h1 className="text-4xl font-semibold leading-[1.05] md:text-6xl">
-              Bridging the gaps between your business and <span className="text-electric">technology</span>
-            </h1>
-            <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              Alfador designs, implements, and maintains intelligent IT solutions to make your business secure,
-              efficient, and profitable.
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <Button
-                asChild
-                size="lg"
-                className="rounded-full bg-electric px-7 text-electric-foreground hover:bg-electric/90"
-              >
-                <Link to="/contact">
-                  Contact us
-                  <ArrowRight className="ml-1.5 h-4 w-4" aria-hidden />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full px-7">
-                <Link to="/solutions">Explore solutions</Link>
-              </Button>
-            </div>
-            <div className="mt-8 flex flex-col items-center gap-1">
-              <div className="flex items-center gap-1.5">
-                <span className="flex" aria-hidden>
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-electric text-electric" />
-                  ))}
-                </span>
-                <span className="text-sm font-semibold">5.0</span>
+      {/* Hero — dark two-column */}
+      <div className="relative overflow-hidden border-b border-primary-foreground/10 bg-ink text-primary-foreground">
+        <div
+          className="pointer-events-none absolute inset-0"
+          aria-hidden
+          style={{
+            backgroundImage:
+              "radial-gradient(55rem 30rem at 85% 20%, color-mix(in oklab, var(--electric) 10%, transparent), transparent)",
+          }}
+        />
+        <Container className="relative py-16 md:py-24">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-10">
+            <div className="rise-in max-w-2xl">
+              <h1 className="text-4xl font-bold leading-[1.05] tracking-tight text-primary-foreground md:text-6xl">
+                Bridging the gaps between your business and{" "}
+                <span className="text-electric">technology</span>
+              </h1>
+              <p className="mt-5 max-w-xl text-base leading-relaxed text-primary-foreground/70 md:text-lg">
+                Alfador designs, implements, and maintains intelligent IT solutions to make your business secure,
+                efficient, and profitable.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button
+                  asChild
+                  size="lg"
+                  className="rounded-full bg-electric px-7 text-electric-foreground hover:bg-electric/90"
+                >
+                  <Link to="/contact">
+                    Contact us
+                    <ArrowRight className="ml-1.5 h-4 w-4" aria-hidden />
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="ghost"
+                  className="rounded-full border border-primary-foreground/30 px-7 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+                >
+                  <Link to="/solutions">Explore solutions</Link>
+                </Button>
               </div>
-              <p className="text-xs text-muted-foreground">from 100+ enterprise deployments</p>
+              <div className="mt-8 flex flex-col items-start gap-1">
+                <div className="flex items-center gap-1.5">
+                  <span className="flex" aria-hidden>
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-electric text-electric" />
+                    ))}
+                  </span>
+                  <span className="text-sm font-semibold">5.0</span>
+                </div>
+                <p className="text-xs text-primary-foreground/60">from 100+ enterprise deployments</p>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div
+                className="pointer-events-none absolute -inset-6"
+                aria-hidden
+                style={{
+                  backgroundImage:
+                    "radial-gradient(50% 50% at 50% 50%, color-mix(in oklab, var(--electric) 14%, transparent), transparent 70%)",
+                }}
+              />
+              <img
+                src={heroImage.url}
+                alt="Connected 3D server stacks and glowing data infrastructure network"
+                width={1640}
+                height={924}
+                className="relative w-full rounded-3xl object-cover"
+              />
+              <div
+                className="pointer-events-none absolute inset-0 rounded-3xl"
+                aria-hidden
+                style={{
+                  backgroundImage:
+                    "linear-gradient(to right, color-mix(in oklab, var(--ink) 65%, transparent), transparent 30%), linear-gradient(to top, color-mix(in oklab, var(--ink) 55%, transparent), transparent 25%)",
+                }}
+              />
             </div>
           </div>
-
         </Container>
       </div>
 
