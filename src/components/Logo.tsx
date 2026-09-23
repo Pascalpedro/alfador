@@ -13,7 +13,7 @@ export function Logo({ className = "" }: { className?: string }) {
       />
       <span className="flex flex-col leading-none">
         <span className="font-display text-xl font-bold tracking-tight md:text-2xl">ALFADOR</span>
-        <span className="mt-1 text-[9px] font-medium uppercase tracking-[0.32em] text-primary-foreground/60 md:text-[10px]">
+        <span className="mt-1 text-[9px] font-medium uppercase tracking-[0.32em] text-foreground/55 md:text-[10px]">
           Integrated Systems
         </span>
       </span>
