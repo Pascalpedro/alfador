@@ -130,12 +130,12 @@ function Home() {
 
       {/* Why choose Alfador — clean white divider between hero and services */}
       <div className="bg-white">
-        <Container className="py-20 md:py-24">
+        <Container className="py-20 md:py-28">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-bold font-display uppercase tracking-[0.22em] text-electric">
-              Why Choose Alfador
-            </span>
-            <p className="mt-6 text-2xl font-semibold leading-snug text-navy md:text-3xl">
+            <h2 className="text-3xl font-semibold leading-[1.15] text-navy md:text-4xl">
+              WHY CHOOSE ALFADOR?
+            </h2>
+            <p className="mt-10 text-base leading-relaxed text-muted-foreground md:mt-14 md:text-lg">
               “We are the gateway through which your business passes to become secure, efficient,
               and dominant in its space (The Door to Alpha). Alfador provides the engineering and
               technology solutions that make that transition seamless”
