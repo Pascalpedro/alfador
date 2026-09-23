@@ -10,11 +10,11 @@ import {
   Hotel,
   Landmark,
   ShoppingBag,
-  Star,
   Tractor,
   Truck,
   type LucideIcon,
 } from "lucide-react";
+import heroImage from "@/assets/hero-servers.jpg";
 import { Button } from "@/components/ui/button";
 import { Container, Section } from "@/components/layout-primitives";
 import { CTABand } from "@/components/CTABand";
@@ -84,45 +84,47 @@ function Home() {
   const advisory = solutions[6];
   return (
     <>
-      {/* Hero */}
-      <div className="bg-surface">
-        <Container className="py-16 text-center md:py-24">
-          <div className="rise-in mx-auto max-w-3xl">
-            <h1 className="text-4xl font-semibold leading-[1.05] md:text-6xl">
-              Bridging the gaps between your business and <span className="text-electric">technology</span>
+      {/* Hero — full-bleed background image, left-aligned content */}
+      <div className="relative isolate overflow-hidden bg-ink">
+        <img
+          src={heroImage}
+          alt=""
+          aria-hidden
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        {/* Readability overlays: dark navy grading from the left, fading over the image */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/30 md:via-ink/70 md:to-ink/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-ink/30" />
+        <Container className="relative py-20 md:py-32 lg:py-40">
+          <div className="rise-in max-w-xl md:max-w-2xl">
+            <h1 className="text-4xl font-semibold leading-[1.05] text-white md:text-6xl">
+              Bridging the gaps between your business and{" "}
+              <span className="text-electric">technology</span>
             </h1>
-            <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              Alfador designs, implements, and maintains intelligent IT solutions to make your business secure,
-              efficient, and profitable.
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75 md:text-lg">
+              Alfador designs, implements, and maintains intelligent IT solutions to make your business
+              secure, efficient, and profitable.
             </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <div className="mt-8 flex flex-wrap gap-3">
               <Button
                 asChild
                 size="lg"
-                className="rounded-full bg-electric px-7 text-electric-foreground hover:bg-electric/90"
+                className="rounded-lg bg-electric px-7 text-electric-foreground hover:bg-electric/90"
               >
                 <Link to="/contact">
                   Contact us
                   <ArrowRight className="ml-1.5 h-4 w-4" aria-hidden />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full px-7">
+              <Button
+                asChild
+                size="lg"
+                className="rounded-lg bg-white px-7 text-navy hover:bg-white/90"
+              >
                 <Link to="/solutions">Explore solutions</Link>
               </Button>
             </div>
-            <div className="mt-8 flex flex-col items-center gap-1">
-              <div className="flex items-center gap-1.5">
-                <span className="flex" aria-hidden>
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-electric text-electric" />
-                  ))}
-                </span>
-                <span className="text-sm font-semibold">5.0</span>
-              </div>
-              <p className="text-xs text-muted-foreground">from 100+ enterprise deployments</p>
-            </div>
           </div>
-
         </Container>
       </div>
 
