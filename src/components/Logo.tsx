@@ -11,7 +11,12 @@ export function Logo({ className = "" }: { className?: string }) {
         height={48}
         className="h-11 w-11 rounded-xl shadow-soft transition-transform duration-300 group-hover:scale-105 md:h-12 md:w-12"
       />
-      <span className="font-display text-xl font-semibold tracking-tight md:text-2xl">Alfador</span>
+      <span className="flex flex-col leading-none">
+        <span className="font-display text-xl font-bold tracking-tight md:text-2xl">ALFADOR</span>
+        <span className="mt-1 text-[9px] font-medium uppercase tracking-[0.32em] text-foreground/55 md:text-[10px]">
+          Integrated Systems
+        </span>
+      </span>
     </Link>
   );
 }
