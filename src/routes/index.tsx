@@ -19,6 +19,7 @@ import { Button } from "@/components/ui/button";
 import { Container, Section } from "@/components/layout-primitives";
 import { CTABand } from "@/components/CTABand";
 import { solutions } from "@/data/content";
+import heroImage from "@/assets/alfador-hero.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
