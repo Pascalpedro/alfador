@@ -27,10 +27,7 @@ export const Route = createFileRoute("/solutions")({
   component: Solutions,
 });
 
-const ctaMap: Record<
-  string,
-  { label: string; variant: "default" | "accent" }
-> = {
+const ctaMap: Record<string, { label: string; variant: "default" | "accent" }> = {
   network: { label: "Request an Infrastructure Audit", variant: "default" },
   cloud: { label: "Request an Infrastructure Audit", variant: "default" },
   security: { label: "Request an Infrastructure Audit", variant: "default" },
@@ -54,15 +51,12 @@ function Solutions() {
     <>
       <PageHero
         eyebrow="Solutions"
-        title="Enterprise technology capabilities, delivered as one integrated system."
+        title="Enterprise Technology Solutions."
         description="From network foundations and cloud platforms to AI automation, physical security, and strategic advisory — every service is designed to work together."
       />
 
       <Section className="pb-6 pt-10 md:pt-14">
-        <nav
-          aria-label="Solutions quick navigation"
-          className="flex flex-wrap gap-2 md:gap-3"
-        >
+        <nav aria-label="Solutions quick navigation" className="flex flex-wrap gap-2 md:gap-3">
           {solutions.map((s) => (
             <Link
               key={s.slug}
@@ -81,11 +75,7 @@ function Solutions() {
         const isSurface = i % 2 === 1;
 
         return (
-          <Section
-            key={s.slug}
-            id={s.anchor}
-            className={`scroll-mt-24 ${isSurface ? "bg-surface" : "bg-background"}`}
-          >
+          <Section key={s.slug} id={s.anchor} className={`scroll-mt-24 ${isSurface ? "bg-surface" : "bg-background"}`}>
             <div className="mx-auto max-w-5xl">
               {/* Section header */}
               <div className="flex items-start gap-4 md:gap-6">
@@ -93,19 +83,13 @@ function Solutions() {
                   <s.icon className="h-5 w-5 md:h-6 md:w-6" aria-hidden />
                 </span>
                 <div className="min-w-0">
-                  <span className="font-display text-sm font-semibold text-muted-foreground">
-                    0{i + 1}
-                  </span>
-                  <h2 className="mt-1 text-3xl font-semibold leading-tight md:text-4xl">
-                    {s.title}
-                  </h2>
+                  <span className="font-display text-sm font-semibold text-muted-foreground">0{i + 1}</span>
+                  <h2 className="mt-1 text-3xl font-semibold leading-tight md:text-4xl">{s.title}</h2>
                 </div>
               </div>
 
               {s.tagline && (
-                <p className="mt-4 max-w-3xl text-lg italic leading-relaxed text-electric md:text-xl">
-                  {s.tagline}
-                </p>
+                <p className="mt-4 max-w-3xl text-lg italic leading-relaxed text-electric md:text-xl">{s.tagline}</p>
               )}
 
               {s.description && (
@@ -122,13 +106,8 @@ function Solutions() {
 
                 <div className="mt-6 grid gap-6 md:grid-cols-2">
                   {s.offerings?.map((group) => (
-                    <div
-                      key={group.title}
-                      className="rounded-2xl border border-border bg-card p-6 shadow-soft md:p-8"
-                    >
-                      <h4 className="text-lg font-semibold leading-snug md:text-xl">
-                        {group.title}
-                      </h4>
+                    <div key={group.title} className="rounded-2xl border border-border bg-card p-6 shadow-soft md:p-8">
+                      <h4 className="text-lg font-semibold leading-snug md:text-xl">{group.title}</h4>
                       {group.description && (
                         <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
                           {group.description}
@@ -136,14 +115,8 @@ function Solutions() {
                       )}
                       <ul className="mt-5 space-y-3">
                         {group.items.map((item) => (
-                          <li
-                            key={item}
-                            className="flex items-start gap-3 text-sm leading-relaxed md:text-base"
-                          >
-                            <Check
-                              className="mt-0.5 h-4 w-4 shrink-0 text-electric"
-                              aria-hidden
-                            />
+                          <li key={item} className="flex items-start gap-3 text-sm leading-relaxed md:text-base">
+                            <Check className="mt-0.5 h-4 w-4 shrink-0 text-electric" aria-hidden />
                             <span>{item}</span>
                           </li>
                         ))}
