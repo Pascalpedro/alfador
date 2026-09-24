@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check } from "lucide-react";
-import { PageHero, Section } from "@/components/layout-primitives";
+import { Container, Eyebrow, Section } from "@/components/layout-primitives";
 import { CTABand } from "@/components/CTABand";
 import { Button } from "@/components/ui/button";
 import { solutions } from "@/data/content";
+import erpDiagram from "@/assets/erp-diagram.jpg";
 
 export const Route = createFileRoute("/solutions")({
   head: () => ({
