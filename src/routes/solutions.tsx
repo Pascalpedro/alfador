@@ -1,10 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check } from "lucide-react";
-import { Container, Eyebrow, Section } from "@/components/layout-primitives";
+import { PageHero, Section } from "@/components/layout-primitives";
 import { CTABand } from "@/components/CTABand";
 import { Button } from "@/components/ui/button";
 import { solutions } from "@/data/content";
-import erpDiagram from "@/assets/erp-diagram.jpg";
 
 export const Route = createFileRoute("/solutions")({
   head: () => ({
@@ -53,31 +52,11 @@ const ctaMap: Record<
 function Solutions() {
   return (
     <>
-      <div className="mesh-bg border-b border-border">
-        <Container className="py-16 md:py-24">
-          <div className="grid items-center gap-10 md:grid-cols-[2fr_3fr] md:gap-8 lg:gap-12">
-            <div className="rise-in">
-              <Eyebrow>Solutions</Eyebrow>
-              <h1 className="mt-6 text-3xl font-semibold leading-[1.12] md:text-4xl lg:text-[2.6rem]">
-                Enterprise technology capabilities, delivered as one integrated system.
-              </h1>
-              <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
-                From network foundations and cloud platforms to AI automation,
-                physical security, and strategic advisory — every service is
-                designed to work together.
-              </p>
-            </div>
-            <div className="rise-in min-w-0">
-              <img
-                src={erpDiagram}
-                alt="ERP integration diagram showing cloud, on-premises, SaaS, hybrid, composable, open-source, headless, industry and AI-native deployment paths"
-                className="h-auto w-full object-contain"
-                loading="eager"
-              />
-            </div>
-          </div>
-        </Container>
-      </div>
+      <PageHero
+        eyebrow="Solutions"
+        title="Enterprise technology capabilities, delivered as one integrated system."
+        description="From network foundations and cloud platforms to AI automation, physical security, and strategic advisory — every service is designed to work together."
+      />
 
       <Section className="pb-6 pt-10 md:pt-14">
         <nav
