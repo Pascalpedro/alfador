@@ -51,7 +51,7 @@ function Solutions() {
     <>
       <PageHero
         eyebrow="Solutions"
-        title="Enterprise Technology Solutions."
+        title="Business Solutions through Technology."
         description="From network foundations and cloud platforms to AI automation, physical security, and strategic advisory — every service is designed to work together."
       />
 
