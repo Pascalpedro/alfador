@@ -52,7 +52,7 @@ function Solutions() {
       <PageHero
         eyebrow="Solutions"
         title="Business Solutions through Technology."
-        description="One interconnected digital framework built for your entire enterprise. From core technical infrastructure to strategic advisory, every layer is designed to run seamlessly, reduce costs, and protect your assets."
+        description="Engineered as a single, cohesive system. From core technical infrastructure to strategic advisory, every layer is designed to run seamlessly, reduce costs, and protect your assets."
       />
 
       <Section className="pb-6 pt-10 md:pt-14">
