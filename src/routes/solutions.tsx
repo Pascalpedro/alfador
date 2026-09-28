@@ -76,8 +76,11 @@ function Solutions() {
               Enterprise Technology Solutions
             </h1>
             <p className="mt-6 text-base leading-relaxed text-white/75 md:text-lg">
-              Engineered as a single, cohesive system. From core technical infrastructure to strategic advisory, every
-              layer is designed to run seamlessly, reduce costs, and protect your assets.
+              <span className="font-bold text-white">Engineered as a single, cohesive system.</span>
+              <span className="mt-2 block">
+                From core technical infrastructure to strategic advisory, every layer is designed to run seamlessly,
+                reduce costs, and protect your assets.
+              </span>
             </p>
           </div>
         </div>
