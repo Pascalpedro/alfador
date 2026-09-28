@@ -70,27 +70,29 @@ function Contact() {
 
   return (
     <>
-      <PageHero
-        eyebrow="Contact"
-        title="Open the door to what's next."
-        description={
-          <>
-            <p>
-              Every business reaches a point where existing systems, processes, or technology are no longer enough.
-              Whether you're looking to modernize, secure, integrate, automate, or transform, tell us where you are and
-              where you want to go.
-            </p>
-            <p className="mt-4">
-              <strong className="font-semibold text-foreground">
-                Alfador helps bridge the gap between business ambition and technological possibility.
-              </strong>
-            </p>
-          </>
-        }
-      />
+      <div className="[&>div]:!py-14 md:[&>div]:!py-20">
+        <PageHero
+          eyebrow="Contact"
+          title="Open the door to what's next."
+          description={
+            <>
+              <p>
+                Every business reaches a point where existing systems, processes, or technology are no longer enough.
+                Whether you're looking to modernize, secure, integrate, automate, or transform, tell us where you are and
+                where you want to go.
+              </p>
+              <p className="mt-4">
+                <strong className="font-semibold text-foreground">
+                  Alfador helps bridge the gap between business ambition and technological possibility.
+                </strong>
+              </p>
+            </>
+          }
+        />
+      </div>
 
-      <Section>
-        <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+      <Section className="!py-14 md:!py-20">
+        <div className="grid gap-9 lg:grid-cols-[1.15fr_0.85fr]">
           <div className="rounded-3xl border border-border bg-card p-7 shadow-soft md:p-10">
             {sent ? (
               <div className="py-10 text-center" role="status">

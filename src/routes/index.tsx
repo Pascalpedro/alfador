@@ -90,7 +90,7 @@ function Home() {
         {/* Readability overlays: dark navy grading from the left, fading over the image */}
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/30 md:via-ink/70 md:to-ink/10" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-ink/30" />
-        <Container className="relative py-20 md:py-32 lg:py-40">
+        <Container className="relative py-16 md:py-24 lg:py-28">
           <div className="rise-in max-w-xl md:max-w-2xl">
             <h1 className="text-4xl font-semibold leading-[1.05] text-white md:text-6xl">
               Bridging the gaps between your business and <span className="text-electric">technology</span>
@@ -120,7 +120,7 @@ function Home() {
 
       {/* Why choose Alfador — clean white divider between hero and services */}
       <div className="bg-white">
-        <Container className="py-20 md:py-28">
+        <Container className="py-14 md:py-20">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-semibold leading-[1.15] text-navy md:text-4xl">Why Choose Alfador?</h2>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground md:mt-8 md:text-lg">
@@ -133,7 +133,7 @@ function Home() {
 
       {/* Services — dark */}
       <div className="bg-ink text-primary-foreground">
-        <Container className="py-20 md:py-28">
+        <Container className="py-14 md:py-20">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-semibold leading-[1.15] md:text-4xl">
               End-to-End Technology & Infrastructure Solutions
@@ -145,7 +145,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {solutions.slice(0, 6).map((s) => (
               <div
                 key={s.slug}
@@ -193,14 +193,14 @@ function Home() {
       </div>
 
       {/* Benefits — light */}
-      <Section className="bg-background">
+      <Section className="bg-background !py-14 md:!py-20">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-semibold leading-[1.15] md:text-4xl">What our engineering delivers</h2>
           <p className="mt-4 text-muted-foreground">
             Our engineering decisions are ultimately judged by one question: does this make the business better?
           </p>
         </div>
-        <ul className="mt-12 grid gap-6 md:grid-cols-3">
+        <ul className="mt-9 grid gap-6 md:grid-cols-3">
           {benefits.map((b) => (
             <li key={b.title} className="rounded-2xl border border-border bg-surface p-6 shadow-soft">
               <span className="grid h-10 w-10 place-items-center rounded-full bg-electric">
@@ -215,14 +215,14 @@ function Home() {
 
       {/* Industries — dark, flows into CTA band */}
       <div className="bg-ink text-primary-foreground">
-        <Container className="pt-20 md:pt-28">
+        <Container className="pt-14 md:pt-20">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-semibold leading-[1.15] md:text-4xl">Industries We Serve</h2>
             <p className="mt-4 text-sm text-primary-foreground/60 md:text-base">
               Engineered for businesses that can never afford to go down.
             </p>
           </div>
-          <ul className="mt-12 grid grid-cols-2 gap-3 md:gap-4 pb-4 lg:grid-cols-5">
+          <ul className="mt-9 grid grid-cols-2 gap-3 pb-4 md:gap-4 lg:grid-cols-5">
             {industries.map((industry) => (
               <li
                 key={industry.title}

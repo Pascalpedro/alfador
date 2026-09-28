@@ -65,7 +65,7 @@ function Solutions() {
           aria-hidden
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-ink/20" aria-hidden />
-        <div className="relative mx-auto w-full max-w-6xl px-5 py-24 md:px-8 md:py-36 lg:py-44">
+        <div className="relative mx-auto w-full max-w-6xl px-5 py-16 md:px-8 md:py-24 lg:py-28">
           <div className="flex justify-start">
             <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-white/85 backdrop-blur-sm">
               Solutions
@@ -86,7 +86,7 @@ function Solutions() {
         </div>
       </div>
 
-      <Section className="pb-6 pt-10 md:pt-14">
+      <Section className="!pb-5 !pt-8 md:!pt-10">
         <nav aria-label="Solutions quick navigation" className="flex flex-wrap gap-2 md:gap-3">
           {solutions.map((s) => (
             <Link
@@ -106,7 +106,11 @@ function Solutions() {
         const isSurface = i % 2 === 1;
 
         return (
-          <Section key={s.slug} id={s.anchor} className={`scroll-mt-24 ${isSurface ? "bg-surface" : "bg-background"}`}>
+          <Section
+            key={s.slug}
+            id={s.anchor}
+            className={`scroll-mt-24 !py-14 md:!py-20 ${isSurface ? "bg-surface" : "bg-background"}`}
+          >
             <div className="mx-auto max-w-5xl">
               {/* Section header */}
               <div className="flex items-start gap-4 md:gap-6">
@@ -130,7 +134,7 @@ function Solutions() {
               )}
 
               {/* Core offerings */}
-              <div className="mt-12">
+              <div className="mt-9">
                 <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">
                   {s.offeringsLabel || "Core Offerings"}
                 </h3>
@@ -158,7 +162,7 @@ function Solutions() {
               </div>
 
               {/* CTA */}
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
                 <Button
                   asChild
                   size="lg"

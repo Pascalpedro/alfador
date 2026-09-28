@@ -75,7 +75,7 @@ function About() {
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-border bg-background">
         <div className="grid-bg absolute inset-0 opacity-60" aria-hidden />
-        <Container className="relative py-20 md:py-28">
+        <Container className="relative py-14 md:py-20">
           <div className="mx-auto max-w-4xl text-center">
             <span className="inline-flex items-center rounded-full bg-navy px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-white">
               Who we are
@@ -100,7 +100,7 @@ function About() {
 
       {/* Mission & Vision */}
       <section className="bg-secondary/50">
-        <Container className="py-20 md:py-28">
+        <Container className="py-14 md:py-20">
           <div className="grid gap-8 lg:grid-cols-2">
             <div className="rounded-3xl border border-border bg-card p-8 shadow-soft transition-all duration-300 hover:border-brand/30 hover:shadow-lift md:p-10">
               <span className="inline-flex items-center rounded-full border border-border bg-secondary px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
@@ -145,7 +145,7 @@ function About() {
 
       {/* Core Values */}
       <section className="bg-background">
-        <Container className="py-20 md:py-28">
+        <Container className="py-14 md:py-20">
           <div className="mx-auto max-w-2xl text-center">
             <span className="inline-flex items-center rounded-full border border-border bg-secondary px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
               What guides us
@@ -156,7 +156,7 @@ function About() {
             </p>
           </div>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {coreValues.map((value) => (
               <div
                 key={value.title}
@@ -175,8 +175,8 @@ function About() {
 
       {/* Why Choose Alfador */}
       <section className="bg-navy text-white">
-        <Container className="py-20 md:py-28">
-          <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
+        <Container className="py-14 md:py-20">
+          <div className="grid items-start gap-9 lg:grid-cols-2 lg:gap-12">
             <div>
               <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-white/80">
                 Why Alfador
@@ -210,7 +210,7 @@ function About() {
 
       {/* CTA */}
       <section className="bg-electric">
-        <Container className="py-16 md:py-20">
+        <Container className="py-12 md:py-14">
           <div className="flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
             <div>
               <h2 className="text-2xl font-semibold text-white md:text-3xl">Ready to transform your operations?</h2>
