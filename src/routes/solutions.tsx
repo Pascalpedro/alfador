@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check } from "lucide-react";
-import { PageHero, Section } from "@/components/layout-primitives";
+import { Section } from "@/components/layout-primitives";
 import { CTABand } from "@/components/CTABand";
 import { Button } from "@/components/ui/button";
 import { solutions } from "@/data/content";
+import solutionsHero from "@/assets/solutions-hero.jpg";
 
 export const Route = createFileRoute("/solutions")({
   head: () => ({
