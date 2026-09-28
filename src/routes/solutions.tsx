@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check } from "lucide-react";
-import { PageHero, Section } from "@/components/layout-primitives";
+import { Section } from "@/components/layout-primitives";
 import { CTABand } from "@/components/CTABand";
 import { Button } from "@/components/ui/button";
 import { solutions } from "@/data/content";
+import solutionsHero from "@/assets/solutions-hero.jpg";
 
 export const Route = createFileRoute("/solutions")({
   head: () => ({
@@ -49,11 +50,38 @@ const ctaMap: Record<string, { label: string; variant: "default" | "accent" }> =
 function Solutions() {
   return (
     <>
-      <PageHero
-        eyebrow="Solutions"
-        title="Business Solutions through Technology."
-        description="Engineered as a single, cohesive system. From core technical infrastructure to strategic advisory, every layer is designed to run seamlessly, reduce costs, and protect your assets."
-      />
+      <div className="relative isolate overflow-hidden bg-ink">
+        <img
+          src={solutionsHero}
+          alt="Enterprise technology systems diagram surrounded by connected cloud and infrastructure graphics"
+          className="absolute inset-0 h-full w-full object-cover object-[center_right]"
+          loading="eager"
+          decoding="async"
+        />
+        {/* Readability overlay: deep navy on the left, transparent over the graphics on the right */}
+        <div className="absolute inset-0 bg-ink/70 md:bg-transparent" aria-hidden />
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/20 md:via-ink/70 md:to-transparent"
+          aria-hidden
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-ink/20" aria-hidden />
+        <div className="relative mx-auto w-full max-w-6xl px-5 py-24 md:px-8 md:py-36 lg:py-44">
+          <div className="flex justify-start">
+            <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-white/85 backdrop-blur-sm">
+              Solutions
+            </span>
+          </div>
+          <div className="mt-6 max-w-full text-white md:max-w-[40%]">
+            <h1 className="text-4xl font-semibold leading-[1.05] text-white md:text-5xl lg:text-6xl">
+              Enterprise Technology Solutions
+            </h1>
+            <p className="mt-6 text-base leading-relaxed text-white/75 md:text-lg">
+              Engineered as a single, cohesive system. From core technical infrastructure to strategic advisory, every
+              layer is designed to run seamlessly, reduce costs, and protect your assets.
+            </p>
+          </div>
+        </div>
+      </div>
 
       <Section className="pb-6 pt-10 md:pt-14">
         <nav aria-label="Solutions quick navigation" className="flex flex-wrap gap-2 md:gap-3">
