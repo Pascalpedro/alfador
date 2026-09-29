@@ -7,14 +7,14 @@ export function Footer() {
     <footer className="mt-24 bg-ink text-primary-foreground">
       <div className="mx-auto max-w-6xl px-5 py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
-          <div className="min-w-0">
+          <div className="flex min-w-0 flex-col items-center justify-center text-center md:block md:text-left">
             <img
               src={lockup}
               alt="Alfador Integrated Systems — Bridging business and technology"
-              width={627}
-              height={406}
+              width={723}
+              height={741}
               loading="lazy"
-              className="h-auto w-72 max-w-full md:w-80"
+              className="h-auto max-w-[180px] object-contain md:max-w-none md:w-80"
             />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-primary-foreground/70">
               Bridging the gaps between your business and technology.
