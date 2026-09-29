@@ -20,8 +20,8 @@ const contact = {
 } as const;
 
 const social = [
-  { label: "X (Twitter)", icon: X, href: "#" },
-  { label: "Facebook", icon: Facebook, href: "#" },
+  { label: "X (Twitter)", icon: X, href: "https://x.com/AlfadorSystems" },
+  { label: "Facebook", icon: Facebook, href: "https://www.facebook.com/alfadorsystems" },
   { label: "LinkedIn", icon: Linkedin, href: "#" },
   { label: "Instagram", icon: Instagram, href: "#" },
 ] as const;
