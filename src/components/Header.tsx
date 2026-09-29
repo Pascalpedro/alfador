@@ -20,8 +20,8 @@ const contact = {
 } as const;
 
 const social = [
-  { label: "X (Twitter)", icon: X, href: "#" },
-  { label: "Facebook", icon: Facebook, href: "#" },
+  { label: "X (Twitter)", icon: X, href: "https://x.com/AlfadorSystems" },
+  { label: "Facebook", icon: Facebook, href: "https://www.facebook.com/alfadorsystems" },
   { label: "LinkedIn", icon: Linkedin, href: "#" },
   { label: "Instagram", icon: Instagram, href: "#" },
 ] as const;
@@ -54,16 +54,20 @@ export function Header() {
 
           {/* Social Links */}
           <div className="flex h-full items-center divide-x divide-white/20 border-l border-white/20">
-            {social.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                aria-label={item.label}
-                className="grid h-full w-10 place-items-center text-white/80 transition-colors hover:bg-white/10 hover:text-white"
-              >
-                <item.icon className="h-4 w-4" />
-              </a>
-            ))}
+            {social.map((item) => {
+              const isLive = item.href !== "#";
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  aria-label={item.label}
+                  {...(isLive ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  className="grid h-full w-10 place-items-center text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+                >
+                  <item.icon className="h-4 w-4" />
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>
