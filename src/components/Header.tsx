@@ -15,8 +15,8 @@ const nav = [
 const contact = {
   phone: "+234-803-914-5668",
   phoneHref: "tel:+2348039145668",
-  email: "alfador.info@gmail.com",
-  emailHref: "mailto:alfador.info@gmail.com",
+  email: "info@alfadorsystems.tech",
+  emailHref: "mailto:info@alfadorsystems.tech",
 } as const;
 
 const social = [

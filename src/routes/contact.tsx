@@ -105,8 +105,8 @@ function Contact() {
                 </p>
                 <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
                   For urgent enquiries, email{" "}
-                  <a className="text-foreground underline" href="mailto:alfador.info@gmail.com">
-                    alfador.info@gmail.com
+                  <a className="text-foreground underline" href="mailto:info@alfadorsystems.tech">
+                    info@alfadorsystems.tech
                   </a>{" "}
                   directly.
                 </p>
@@ -180,8 +180,8 @@ function Contact() {
                   >
                     <AlertCircle className="h-4 w-4 shrink-0" aria-hidden />
                     Sorry, your message couldn&apos;t be sent. Please try again, or email us directly at{" "}
-                    <a className="underline" href="mailto:alfador.info@gmail.com">
-                      alfador.info@gmail.com
+                    <a className="underline" href="mailto:info@alfadorsystems.tech">
+                      info@alfadorsystems.tech
                     </a>
                     .
                   </p>
@@ -212,8 +212,8 @@ function Contact() {
               {
                 icon: Mail,
                 title: "Email",
-                body: "alfador.info@gmail.com",
-                href: "mailto:alfador.info@gmail.com",
+                body: "info@alfadorsystems.tech",
+                href: "mailto:info@alfadorsystems.tech",
               },
               {
                 icon: Phone,
