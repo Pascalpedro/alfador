@@ -86,20 +86,26 @@ function Home() {
     <>
       {/* Hero — full-bleed background image, left-aligned content */}
       <div className="relative isolate overflow-hidden bg-ink">
-        <img src={heroImage} alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover" />
-        {/* Readability overlays: dark navy grading from the left, fading over the image */}
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/30 md:via-ink/70 md:to-ink/10" />
+        <img
+          src={heroImage}
+          alt=""
+          aria-hidden
+          className="absolute inset-0 h-full w-full object-cover object-[75%_center] md:object-center"
+        />
+        {/* Readability overlays: a deeper solid wash on mobile, a lighter grade on desktop */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/95 to-ink/40 md:hidden" />
+        <div className="absolute inset-0 hidden bg-gradient-to-r from-ink via-ink/70 to-ink/10 md:block" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-ink/30" />
-        <Container className="relative py-16 md:py-24 lg:py-28">
+        <Container className="relative pt-32 pb-24 md:py-24 lg:py-28">
           <div className="rise-in max-w-xl md:max-w-2xl">
-            <h1 className="text-4xl font-semibold leading-[1.05] text-white md:text-6xl">
+            <h1 className="text-3xl font-semibold leading-[1.05] text-white sm:text-4xl md:text-6xl">
               Bridging the gaps between your business and <span className="text-electric">technology</span>
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75 md:text-lg">
               Alfador designs, implements, and maintains intelligent IT solutions to make your business secure,
               efficient, and profitable.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-row flex-wrap items-center justify-start gap-3">
               <Button
                 asChild
                 size="lg"
